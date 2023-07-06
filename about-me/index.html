@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ro">
+<!-- About me page in romanian mihailungu.ml/about-me -->
+<head>
+  <title>Despre mine</title>
+  <link rel="icon" type="image/x-icon" href="../resources/images/poza.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentYear = new Date().getFullYear();
+      var footerYear = document.getElementById("footer-year");
+      footerYear.textContent = currentYear;
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+  </style>
+	<style>
+	
+	button {
+  margin: 20px;
+}
+.custom-btn {
+	
+  width: 270px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+		.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  box-shadow: none;
+  width: 270px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+}
+.btn-12 span {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  display: block;
+  position: absolute;
+  width: 270px;
+  height: 40px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin:0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+ color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+		
+		
+	</style>
+	
+	
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+	  #column1 {
+      float: left;
+      width: 25%;
+      padding: 10px;
+      height: auto;
+    }
+
+	  #column2 {
+      float: right;
+      width: 70%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+    /* Clear floats after the columns */
+	  
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+	  
+	  .about {
+		  padding-left: 5px;
+		  padding-right: 0;
+		  
+	  }
+	  
+	  
+  </style>
+
+	
+	
+	
+  <style>
+	  
+	  .dropdown-menu {
+  background-color: rgba(51, 51, 51, 1);
+}
+
+.dropdown-menu > li > a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu > li > a > font {
+  color: #fff;
+}
+
+    .all-browsers {
+      margin: 0;
+      padding: 15px;
+      background-color: lightgray;
+    }
+
+    .all-browsers > h1,
+    .browser {
+      margin: 10px;
+      padding: 15px;
+    }
+
+    .browser {
+      background: white;
+    }
+
+    .browser > h2,
+    p {
+      margin: 4px;
+      font-size: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+		align-content: center;
+		justify-content: center;
+		
+	  }
+	  
+	  .mijloc {
+		  padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 auto;
+		  padding: 0 300px;
+		  @media (max-width: 1500px) {
+    padding: 0 20px; /* spațiu mai mic pentru ecrane mici */
+  }
+	  }
+	  
+	
+
+    .content {
+      flex: 1;
+    }
+
+    footer {
+      padding: 10px;
+      background-color: black;
+      color: white;
+      margin-top: auto;
+    }
+
+    .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+		
+    }
+  </style>
+
+  <style>
+    #container {
+      margin: 0 auto;
+      max-width: 1850px;
+    }
+
+    #content {
+      width: 100%;
+      padding: 0px;
+		
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../resources/images/poza.jpg" class="confirmed"
+            style="width:45;height:30px;" /></a>
+        <a class="navbar-brand" href="../index.html"><font face="Lora">Mihai Lungu</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../index.html">Acasă</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Despre <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+				
+                  <li><a href="../games/index.html"><font  size="+2">Jocuri</font></a></li>
+                  <li><a href="../reading/index.html"><font  size="+2">Lectură</font></a></li>
+                  <li><a href="../kitchen/index.html"><font  size="+2">Bucătărie</font></a></li>
+                  <li><a href="index.html"><font  size="+2">Despre mine</font></a></li>
+               
+
+              
+            </ul>
+          </li>
+		<li><a href="https://tpa.mihailungu.ml/" target="_blank">TPA</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="../resources/ro-flag.png" class="confirmed" style="width: 25px;height:15px;"/>&nbsp;&nbsp;RO <span class="caret"></span></a>
+            <ul class="dropdown-menu " style="width:50%" >
+				
+              <li><a href="en/index.html"><img src="../resources/en-flag.png" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>EN</font></a></li>
+              <li><a href="ru/index.html"><img src="../resources/ru-flag.jpg" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>RU</font></a></li>
+				
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <font size="6.5" color="white">.</font>
+<img src="../resources/images/header.png" >
+	<h1 align="center"><font face="Lora">Despre mine</font></h1>
+	<div class="mijloc"> 
+	
+		<h3>Numele meu este Mihai Lungu și sunt student la Universitatea Pedagogică de Stat Ion Creangă din Chișinău, Moldova. 
+			Alegerea mea de specializare este Informatica Licență și sunt pasionat să învăț în mod independent diverse limbaje de programare, printre care se numără C#, C++, C, Python, Visual Basic, Visual FoxPro și Java. În timpul liber, îmi place să citesc cărți și să mă bucur de jocurile video. Sunt o persoană cu o latură sentimentală pronunțată și îmi place să reflectez asupra viitorului.
+
+În viitorul apropiat, am planuri mari de a-mi dezvolta propria companie în domeniul IT. Visez să creez un mediu propice pentru inovație și tehnologie, unde oamenii să poată lucra împreună și să aducă soluții inovatoare în lumea digitală în continuă evoluție. Sunt entuziasmat de perspectivele pe care le aduce acest domeniu și sunt hotărât să-mi construiesc cariera în industria tehnologică.</h3>
+		
+		
+		
+	</div>
+	<!--<center><button class="custom-btn btn-12" onClick="window.open('https://app.mihailungu.ml/')"><span>Apasămă!!!</span><span>Aplicațiile mele</span></button></center> -->
+	
+  <!-- Baza ro -->
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <font size="4"><p>© <span id="footer-year"></span> <font face="Lora" size="+1">Mihai Lungu</font></p></font>
+        </div>
+        <div class="col-md-6" align="right">
+          <p>
+            <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
+                src="../resources/linkedin-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
+                src="../resources/fb-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
+                src="../resources/ig-logo.png" style="width: 50px;height: 50px" /></a>
+          </p>
+        </div>
+      </div>
+         </div>
+  </footer>
+
+</body>
+
+</html>

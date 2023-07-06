@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Home page in english mihailungu.ml/en -->
+<head>
+  <title>Home</title>
+  <link rel="icon" type="image/x-icon" href="../resources/images/poza.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentYear = new Date().getFullYear();
+      var footerYear = document.getElementById("footer-year");
+      footerYear.textContent = currentYear;
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+  </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+	  #column1 {
+      float: left;
+      width: 25%;
+      padding: 10px;
+      height: auto;
+    }
+
+	  #column2 {
+      float: right;
+      width: 70%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+    /* Clear floats after the columns */
+	  
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+	  .about {
+		  padding-left: 10px;
+		  padding-right: 0px;
+		  
+	  }
+	  
+	  
+  </style>
+
+  <style>
+
+	  .dropdown-menu {
+  background-color: #333;
+}
+
+.dropdown-menu > li > a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu > li > a > font {
+  color: #fff;
+}
+	  
+    .all-browsers {
+      margin: 0;
+      padding: 15px;
+      background-color: lightgray;
+    }
+
+    .all-browsers > h1,
+    .browser {
+      margin: 10px;
+      padding: 15px;
+    }
+
+    .browser {
+      background: white;
+    }
+
+    .browser > h2,
+    p {
+      margin: 4px;
+      font-size: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+		align-content: center;
+		justify-content: center;
+		
+	  }
+	  
+	  .mijloc {
+		  padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 auto;
+	  }
+	  
+	
+
+    .content {
+      flex: 1;
+    }
+
+    footer {
+      padding: 10px;
+      background-color: black;
+      color: white;
+      margin-top: auto;
+    }
+
+    .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+		
+    }
+  </style>
+
+  <style>
+    #container {
+      margin: 0 auto;
+      max-width: 1850px;
+    }
+
+    #content {
+      width: 100%;
+      padding: 0px;
+		
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href=""><img src="../resources/images/poza.jpg" class="confirmed"
+            style="width:45;height:30px;" /></a>
+        <a class="navbar-brand" href=""><font face="Lora">Mihai Lungu</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+				
+                  <li><a href="../games/en/index.html"><font  size="+2">Games</font></a></li>
+                  <li><a href="../reading/en/index.html"><font  size="+2">Reading</font></a></li>
+                  <li><a href="../kitchen/en/index.html"><font  size="+2">Kitchen</font></a></li>
+                  <li><a href="../about-me/en/index.html"><font  size="+2">About me</font></a></li>
+                
+
+              
+            </ul>
+          </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="../resources/en-flag.png" class="confirmed" style="width: 25px;height:15px;"/>&nbsp;&nbsp;EN <span class="caret"></span></a>
+            <ul class="dropdown-menu " style="width:50%">
+
+              <li><a href="../index.html"><img src="../resources/ro-flag.png" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>RO</font></a></li>
+              <li><a href="../ru/index.html"><img src="../resources/ru-flag.jpg" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>RU</font></a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <font size="6.5" color="white">.</font>
+
+  <img src="../resources/images/cetate.png" alt="Source Wikipedia.org" title="Source Wikipedia.org">
+
+  <div class="mijloc">
+<font size="6.5" color="white">.</font>
+	  
+    <div id="content" class="container">
+		
+	  <div class="row " >
+		<div class="col-md-6 col-lg-2" align="center" >
+			<img src="../resources/images/mihai.jpg" style="width: 194px; height: 259px">
+			<font face="Lora" size="5"><p>Lungu Mihai</p></font>
+			<div class="col-md-6 col-lg-9">&nbsp;</div>
+			</div>
+		  <div class="col-md-6 col-lg-9">&nbsp;</div>
+		<div class="col-md-6 col-lg-10"  >
+		<font size="4"><p>Biography:</p>
+<p>I was born on November 22, 2003 in the Mother and Child Center in Chisinau.</p>
+<p>2007-2010 kindergarten no. 16 Izvoraș Soroca-Noua or. Soroca.</p>
+<p>2010-2014 primary classes IPLT "C. Stere" or. Soroca.</p>
+<p>2014-2019 IPLT gymnasium "C. Stere" or. Soroca.</p>
+<p>2019-2022 high school studies IPLT "C. Stere" or. Soroca.</p>
+<p>2022-present Bachelor studies UPSC FMTI Computer Science </p></font>
+
+		</div>
+		<div class="col-md-6 col-lg-9">&nbsp;</div>
+		
+			
+		</div>
+		<div class="row">
+			<div class="col-md-7">
+			 <font size="4"><p>Prizes:</p>
+
+				 <p>2020 2nd place at the local IT Olympiad IPLT "C. Stere"</p>
+
+<p>2020 <a href="https://www.doc.mihailungu.ml/diploma-2.jpg"><u>mention</u></a> at the IPLT District Informatics Olympiad "P. Rareș"</p>
+
+<p>2021 <a href="https://www.doc.mihailungu.ml/diploma-1.jpg"><u>1st place</u></a> at the online computer science olympiad held at the "Ion Creangă" State Pedagogical University in Chisinau</p>
+
+<p>2022 2nd place at the local IT Olympiad IPLT "C. Stere"</p>
+
+<p>2022 <a href="https://www.doc.mihailungu.ml/certificat.jpg"><u>certificate</u></a> for participation in the Solidarity FabLab Soroca digital manufacturing workshops</p>
+
+<p>2023 <a href="https://www.doc.mihailungu.ml/certificat2.jpg"><u>certificate</u></a> for participation in the national scientific conference of students with international participation "Problems and solutions in contemporary science" UPSC</p>
+
+<p>2023 <a href="https://www.doc.mihailungu.ml/diploma-3.jpg"><u>1st place</u></a> at the UPSC University Olympiad in Computer Science</p></font>
+			
+			</div>
+			<div class="col-md-6 col-lg-9">&nbsp;</div>
+			<div>
+			<a class="weatherwidget-io" href="https://forecast7.com/en/47d0128d86/chisinau/" data-label_1="CHIȘINĂU" data-label_2="WEATHER" data-icons="Climacons Animated" data-theme="weather_one" >CHIȘINĂU WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+			</div>
+			<div class="col-md-6 col-lg-9">&nbsp;</div>
+			
+			
+		</div>
+			
+		
+	
+
+    </div>
+</div>
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <font size="4"><p>© <span id="footer-year"></span> <font face="Lora" size="+1">Mihai Lungu</font></p></font>
+        </div>
+        <div class="col-md-6" align="right">
+          <p>
+            <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
+                src="../resources/linkedin-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
+                src="../resources/fb-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
+                src="../resources/ig-logo.png" style="width: 50px;height: 50px" /></a>
+          </p>
+        </div>
+      </div>
+         </div>
+  </footer>
+
+</body>
+
+</html>

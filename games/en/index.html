@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Games page in english mihailungu.ml/games/en -->
+<head>
+  <title>Games</title>
+  <link rel="icon" type="image/x-icon" href="../../resources/images/poza.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	
+	
+	<!--fereastra info pc -->
+	<style>
+        /* Stilurile pentru fereastra modală */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            width: 60%;
+        }
+
+        /* Stiluri pentru imagine */
+        #modal-image {
+            width: 50%;
+            float: right;
+            margin-right: 10px;
+        }
+
+        /* Stiluri suplimentare */
+        .center {
+            text-align: center;
+        }
+    </style>
+	
+	
+	
+	
+<!-- Button -->
+	<style>
+	
+	button {
+  margin: 20px;
+}
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+	  
+    .btn-7 {
+background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: rgba(251,75,2,1);
+  box-shadow:
+   -7px -7px 20px 0px rgba(255,255,255,.9),
+   -4px -4px 5px 0px rgba(255,255,255,.9),
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+  transition: all 0.3s ease;
+}
+.btn-7:before{
+   height: 0%;
+   width: 2px;
+}
+.btn-7:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-7:hover{
+  color: rgba(251,75,2,1);
+  background: transparent;
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgba(251,75,2,1);
+  box-shadow:
+   -7px -7px 20px 0px rgba(255,255,255,.9),
+   -4px -4px 5px 0px rgba(255,255,255,.9),
+   7px 7px 20px 0px rgba(0,0,0,.2),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+  transition: all 0.3s ease;
+}
+.btn-7 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-7 span:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after {
+  width: 100%;
+}
+	
+	</style>
+	
+	
+	
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentYear = new Date().getFullYear();
+      var footerYear = document.getElementById("footer-year");
+      footerYear.textContent = currentYear;
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+  </style>
+
+  <style>
+	  
+	  .full-width-row {
+    width: 70vw;
+    margin-left: -5vw;
+    left: 15%;
+  }
+	  
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+	  #column1 {
+      float: left;
+      width: 25%;
+      padding: 10px;
+      height: auto;
+    }
+
+	  #column2 {
+      float: right;
+      width: 70%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+    /* Clear floats after the columns */
+	  
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+	  
+	  .about {
+		  padding-left: 5px;
+		  padding-right: 0;
+		  
+	  }
+	  
+	  
+  </style>
+
+  <style>
+	  img {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+	  .dropdown-menu {
+  background-color: #333;
+}
+
+.dropdown-menu > li > a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu > li > a > font {
+  color: #fff;
+}
+	  
+    .all-browsers {
+      margin: 0;
+      padding: 15px;
+      background-color: lightgray;
+    }
+
+    .all-browsers > h1,
+    .browser {
+      margin: 10px;
+      padding: 15px;
+    }
+
+    .browser {
+      background: white;
+    }
+
+    .browser > h2,
+    p {
+      margin: 4px;
+      font-size: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+		align-content: center;
+		justify-content: center;
+		
+	  }
+	  
+	  .mijloc {
+		  padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 auto;
+	  }
+	  
+	
+
+    .content {
+      flex: 1;
+    }
+
+    footer {
+      padding: 10px;
+      background-color: black;
+      color: white;
+      margin-top: auto;
+    }
+
+    .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+		
+    }
+  </style>
+
+  <style>
+    
+
+    #content {
+      width: 100%;
+      padding: 0px;
+		
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../en/index.html"><img src="../../resources/images/poza.jpg" class="confirmed"
+            style="width:45;height:30px;" /></a>
+        <a class="navbar-brand" href="../../en/index.html"><font face="Lora">Mihai Lungu</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="../../en/index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+				
+                  <li><a href="index.html"><font  size="+2">Games</font></a></li>
+                  <li><a href="../../reading/index.html"><font  size="+2">Reading</font></a></li>
+                  <li><a href="../../kitchen/index.html"><font  size="+2">Kitchen</font></a></li>
+                  <li><a href="../../about-me/index.html"><font  size="+2">About me</font></a></li>
+               
+
+              
+            </ul>
+          </li>
+		        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="../../resources/en-flag.png" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;EN <span class="caret"></span></a>
+            <ul class="dropdown-menu " style="width:50%" >
+				
+              <li><a href="../index.html"><img src="../../resources/ro-flag.png" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>RO</font></a></li>
+              <li><a href="../ru/index.html"><img src="../../resources/ru-flag.jpg" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>RU</font></a></li>
+				
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <font size="6.5" color="white">.</font>
+
+	<!--<img src="../resources/games/principal.jpg" > -->
+	<img src="../../resources/games/game.jpg" style="width: auto; height: auto">
+	
+	<font size="3" color="white">.</font>
+	
+	<div class="mijloc">
+	
+	<div class="container">
+  <div class="row full-width-row">
+    <div class="col-md-8">
+      <h3>This is where the games where I waste more time are</h3>
+      <p><font color="#333333">P.S. Each game has a link to their official websites (click on images)</font></p>
+    </div>
+<div class="col-md-2   col-lg-1">
+      <button class="custom-btn btn-7" onClick="window.open('https://steamcommunity.com/id/lungu_mihai03/')"><span>My Steam</span></button>
+    </div>
+    <div class="col-md-2 d-flex justify-content-end col-lg-2 col-lg-offset-1">
+      <button class="custom-btn btn-7" onclick="openModal()"><span>My Pc</span></button>
+    </div>
+  </div>
+</div>
+		
+		<div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">My Computer</h1>
+				<h2> Dell Inspiron 3576</h2>
+				<h3> CPU: Intel(R) Core(TM) i7-8550U CPU @1.80GHz </h3>
+				<h3> Ram: 16 GB, 2400 MHz, SODIMM, DDR4 </h3>
+				<h3> GPU 0: Intel(R) UHD Graphics 620 (VRAM: 1GB) </h3>
+				<h3> GPU 1: Radeon(TM) 520 (VRAM: 2GB) </h3>
+				<h3> OS: Microsoft Windows 11 Pro 10.0.22621</h3>
+            </div>
+            
+        </div>
+    </div>
+		
+<script>
+        // Funcția pentru deschiderea ferestrei modale
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+        // Funcția pentru închiderea ferestrei modale
+        function closeModal(event) {
+            if (event.target === document.getElementById("modal")) {
+                document.getElementById("modal").style.display = "none";
+            }
+        }
+    </script>
+		
+	</div>
+	
+	
+	<font size="3" color="white">.</font>
+	
+	<div class="mijloc">
+		
+	  
+	
+
+	
+	
+		
+		
+      <div class="row text-center">
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://eurotrucksimulator2.com/" target="_blank"><img class="card-img-top" src="../../resources/games/ets2.jpg"  title="Euro truck simulator 2" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+		  
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://www.metrothegame.com/en-us/" target="_blank"><img class="card-img-top" src="../../resources/games/metro.jpg" title="Metro last light" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://www.ea.com/games/grid" target="_blank"><img class="card-img-top" src="../../resources/games/grid2.jpg" title="Grid 2" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+      </div>
+		
+      <div class="row text-center mt-4">
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://www.thewitcher.com/" target="_blank"><img class="card-img-top" src="../../resources/games/the-witcher.jpg" title="The witcher" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://www.focus-entmt.com/en/games/snowrunner" target="_blank"><img class="card-img-top" src="../../resources/games/snowrunner.jpg" title="SnowRunner" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://www.minecraft.net/en-us" target="_blank"><img class="card-img-top" src="../../resources/games/minecraft.jpg" title="Minecraft" style="width: auto; height: auto"></a>
+           
+          </div>
+        </div>
+      </div>
+		
+		<div class="row text-center mt-4">
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://bethesda.net/en/dashboard" target="_blank"><img class="card-img-top" src="../../resources/games/wolf-2009.jpg" title="Wolfenstein" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+        <div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://www.ubisoft.com/en-us/game/far-cry/far-cry-3" target="_blank"><img class="card-img-top" src="../../resources/games/far-cry-3.jpg" title="FarCry 3" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+        
+			<div class="col-md-4 pb-1 pb-md-0">
+			<font size="2" color="white">.</font>
+          <div class="card">
+            <a href="https://www.focus-entmt.com/en/games/mudrunner-american-wilds-edition" target="_blank"><img class="card-img-top" src="../../resources/games/mudrunner.jpg" title="MudRunner" style="width: auto; height: auto"></a>
+            
+          </div>
+        </div>
+			
+      </div>
+		
+    </div>
+	
+	
+	
+	
+  <!-- Baza ro -->
+	<font size="2" color="white">.</font>
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <font size="4"><p>© <span id="footer-year"></span> <font face="Lora" size="+1">Mihai Lungu</font></p></font>
+        </div>
+        <div class="col-md-6" align="right">
+          <p>
+            <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
+                src="../../resources/linkedin-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
+                src="../../resources/fb-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
+                src="../../resources/ig-logo.png" style="width: 50px;height: 50px" /></a>
+          </p>
+        </div>
+      </div>
+         </div>
+  </footer>
+
+</body>
+
+</html>
