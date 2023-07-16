@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ro">
+<!-- My Love page in romanian mihailungu.ml/my-love -->
+<head>
+  <title>My Love</title>
+  <link rel="icon" type="image/x-icon" href="../resources/images/poza.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var currentYear = new Date().getFullYear();
+      var footerYear = document.getElementById("footer-year");
+      footerYear.textContent = currentYear;
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+  </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+	  #column1 {
+      float: left;
+      width: 25%;
+      padding: 10px;
+      height: auto;
+    }
+
+	  #column2 {
+      float: right;
+      width: 70%;
+      padding: 10px;
+      height: auto;
+    }
+	  
+    /* Clear floats after the columns */
+	  
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+	  
+	  .about {
+		  padding-left: 5px;
+		  padding-right: 0;
+		  
+	  }
+	  
+	  
+  </style>
+
+  <style>
+	  
+	  .dropdown-menu {
+  background-color: rgba(51, 51, 51, 1);
+}
+
+.dropdown-menu > li > a {
+  color: #fff;
+  font-size: 18px;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu > li > a > font {
+  color: #fff;
+}
+
+    .all-browsers {
+      margin: 0;
+      padding: 15px;
+      background-color: lightgray;
+    }
+
+    .all-browsers > h1,
+    .browser {
+      margin: 10px;
+      padding: 15px;
+    }
+
+    .browser {
+      background: white;
+    }
+
+    .browser > h2,
+    p {
+      margin: 4px;
+      font-size: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+		align-content: center;
+		justify-content: center;
+		
+	  }
+	  
+	  .mijloc {
+		  padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 auto;
+	  }
+	  
+	
+
+    .content {
+      flex: 1;
+    }
+
+    footer {
+      padding: 10px;
+      background-color: black;
+      color: white;
+      margin-top: auto;
+    }
+
+    .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: 0;
+		
+    }
+  </style>
+
+  <style>
+    #container {
+      margin: 0 auto;
+      max-width: 1850px;
+    }
+
+    #content {
+      width: 100%;
+      padding: 0px;
+		
+    }
+  </style>
+</head>
+
+<body>
+	 <video id="video-background" autoplay loop muted>
+    <source src="love.mp4" type="video/mp4">
+  </video>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../resources/images/poza.jpg" class="confirmed"
+            style="width:45;height:30px;" /></a>
+        <a class="navbar-brand" href="../index.html"><font face="Lora">Mihai Lungu</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Acasă</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Despre <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+				
+                  <li><a href="../games/index.html"><font  size="+2">Jocuri</font></a></li>
+                  <li><a href="../reading/index.html"><font  size="+2">Lectură</font></a></li>
+                  <li><a href="../kitchen/index.html"><font  size="+2">Bucătărie</font></a></li>
+                  <li><a href="../about-me/index.html"><font  size="+2">Despre mine</font></a></li>
+               
+
+              
+            </ul>
+          </li>
+		<li><a href="https://tpa.mihailungu.ml/" target="_blank">TPA</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+		
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="../resources/ro-flag.png" class="confirmed" style="width: 25px;height:15px;"/>&nbsp;&nbsp;RO <span class="caret"></span></a>
+            <ul class="dropdown-menu " style="width:50%" >
+				
+              <li><a href="../en/index.html"><img src="../resources/en-flag.png" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>EN</font></a></li>
+              <li><a href="../ru/index.html"><img src="../resources/ru-flag.jpg" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font>RU</font></a></li>
+				
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <font size="6.5" color="white">.</font>
+	<script>function afiseazaErori() {
+  
+      
+      // Închide browserul după 10 secunde
+      setTimeout(function() {
+        window.close();
+      }, 10000);
+			 
+    }
+	window.onload = afiseazaErori;
+	
+	</script>
+	
+
+  <!-- Baza ro -->
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <font size="4"><p>© <span id="footer-year"></span> <font face="Lora" size="+1">Mihai Lungu</font></p></font>
+        </div>
+        <div class="col-md-6" align="right">
+          <p>
+            <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
+                src="../resources/linkedin-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
+                src="../resources/fb-logo.png" style="width: 50px;height: 50px" /></a>
+
+            <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
+                src="../resources/ig-logo.png" style="width: 50px;height: 50px" /></a>
+          </p>
+        </div>
+      </div>
+         </div>
+  </footer>
+
+</body>
+
+</html>
