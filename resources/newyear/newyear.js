@@ -10,7 +10,7 @@ $(function () {
     });
 
     function f() {
-        var i = "/newyear/ny2012.swf";
+        var i = "/ny2012.swf";
         i = i + "?nc=" + (new Date().getTime());
         swfobject.embedSWF(i, "z-audio__player", "1", "1", "9.0.0", null, {}, {
             allowScriptAccess: "always",
