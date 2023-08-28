@@ -10,7 +10,7 @@ $(function () {
     });
 
     function f() {
-        var i = "https://www.mihailungu.com/resources/newyear/ny2012.swf";
+        var i = "https://www.mihailungu.com/resources/newyear/ny2012.mp3";
         i = i + "?nc=" + (new Date().getTime());
         swfobject.embedSWF(i, "z-audio__player", "1", "1", "9.0.0", null, {}, {
             allowScriptAccess: "always",
