@@ -1,56 +1,77 @@
 $(function () {
-    var d = function () {};
-    $(document).delegate(".b-ball_bounce", "mouseenter", function () {
+    // Funcția pentru redarea sunetului MP3
+    var playSound = function () {
+        var audio = new Audio('https://www.mihailungu.com/resources/newyear/ny2012.mp3');
+        audio.play();
+    };
+
+    // Atașăm un eveniment "mouseenter" la elementele cu clasa ".b-ball_bounce"
+    $(document).on("mouseenter", ".b-ball_bounce", function () {
         b(this);
-        m(this)
-    }).delegate(".b-ball_bounce .b-ball__right", "mouseenter", function (i) {
+        m(this);
+        playSound(); // Apelăm funcția pentru a reda sunetul
+    }).on("mouseenter", ".b-ball_bounce .b-ball__right", function (i) {
         i.stopPropagation();
         b(this);
-        m(this)
+        m(this);
+        playSound(); // Apelăm funcția pentru a reda sunetul
     });
 
+    // Funcția pentru încorporarea SWF-ului (lasată aici pentru compatibilitate, dar nu mai este necesară)
     function f() {
-        var i = "https://www.mihailungu.com/resources/newyear/ny2012.mp3";
+        var i = "https://www.mihailungu.com/resources/newyear/ny2012.swf";
         i = i + "?nc=" + (new Date().getTime());
         swfobject.embedSWF(i, "z-audio__player", "1", "1", "9.0.0", null, {}, {
             allowScriptAccess: "always",
             hasPriority: "true"
-        })
+        });
     }
+
+    // Funcția pentru a returna un element din document (nu mai este necesară)
     function h(i) {
         if ($.browser.msie) {
-            return window[i]
+            return window[i];
         } else {
-            return document[i]
+            return document[i];
         }
     }
+
+    // Funcția care se va apela când obiectul Flash este inițializat (nu mai este necesară)
     window.flashInited = function () {
         d = function (j) {
             try {
-                h("z-audio__player").playSound(j)
+                h("z-audio__player").playSound(j);
             } catch (i) {}
-        }
+        };
     };
+
+    // Verificăm dacă există obiectul swfobject în fereastra globală și îl încorporăm (nu mai este necesară)
     if (window.swfobject) {
         window.setTimeout(function () {
             $("body").append('<div class="g-invisible"><div id="z-audio__player"></div></div>');
-            f()
-        }, 100)
+            f(); // Apelăm funcția pentru a încorpora SWF-ul
+        }, 100);
     }
+
+    // Restul codului rămâne neschimbat
+
     var l = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[", "]", "a", "s", "d", "f", "g", "h", "j", "k", "l", ";", "'", "\\"];
     var k = ["z", "x", "c", "v", "b", "n", "m", ",", ".", "/"];
     var g = 36;
     var a = {};
+
     for (var e = 0, c = l.length; e < c; e++) {
-        a[l[e].charCodeAt(0)] = e
+        a[l[e].charCodeAt(0)] = e;
     }
+
     for (var e = 0, c = k.length; e < c; e++) {
-        a[k[e].charCodeAt(0)] = e
+        a[k[e].charCodeAt(0)] = e;
     }
+
     $(document).keypress(function (j) {
         var i = $(j.target);
         if (!i.is("input") && j.which in a) {
-            d(a[j.which])
+            d(a[j.which]);
         }
     });
 
