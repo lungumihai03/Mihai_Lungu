@@ -1,213 +1,226 @@
 <!DOCTYPE html>
 <html lang="ro">
-<!-- 404 page -->
 <head>
-  <title>404 ERROR</title>
-  <link rel="icon" type="image/x-icon" href="https://media.mihailungu.com/resources/images/poza.jpg">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>404 ERROR</title>
+    <link rel="icon" type="image/x-icon" href="https://media.mihailungu.com/resources/images/poza.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentYear = new Date().getFullYear();
+            var footerYear = document.getElementById("footer-year");
+            footerYear.textContent = currentYear;
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+        * {
+            box-sizing: border-box;
+        }
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var currentYear = new Date().getFullYear();
-      var footerYear = document.getElementById("footer-year");
-      footerYear.textContent = currentYear;
-    });
-  </script>
+        /* Create three equal columns that float next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: auto;
+        }
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
-  </style>
+        #column1 {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: auto;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-	  
-	  
-	  
-	  
-	  
+        #column2 {
+            float: right;
+            width: 70%;
+            padding: 10px;
+            height: auto;
+        }
 
-    /* Create three equal columns that floats next to each other */
-    .column {
-      float: left;
-      width: 50%;
-      padding: 10px;
-      height: auto;
-    }
-	  
-	  #column1 {
-      float: left;
-      width: 25%;
-      padding: 10px;
-      height: auto;
-    }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-	  #column2 {
-      float: right;
-      width: 70%;
-      padding: 10px;
-      height: auto;
-    }
-	  
-    /* Clear floats after the columns */
-	  
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-	  
-	  .about {
-		  padding-left: 5px;
-		  padding-right: 0;
-		  
-	  }
-	  
-	  
-  </style>
+        .about {
+            padding-left: 5px;
+            padding-right: 0;
+        }
 
-  <style>
-	  .dropdown-menu {
-  background-color: #333;
+        .dropdown-menu {
+            background-color: #333;
+        }
+
+        .dropdown-menu > li > a {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .dropdown-menu > li > a:hover {
+            background-color: #444;
+        }
+
+        .dropdown-menu > li > a > font {
+            color: #fff;
+        }
+
+        .all-browsers {
+            margin: 0;
+            padding: 15px;
+            background-color: lightgray;
+        }
+
+        .all-browsers > h1,
+        .browser {
+            margin: 10px;
+            padding: 15px;
+        }
+
+        .browser {
+            background: white;
+        }
+
+        .browser > h2,
+        p {
+            margin: 4px;
+            font-size: 100%;
+        }
+
+        body {
+			
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .mijloc {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        footer {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            margin-top: auto;
+        }
+
+        .container-fluid {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        #container {
+            margin: 0 auto;
+            max-width: 1850px;
+        }
+
+        #content {
+            width: 100%;
+            padding: 0px;
+        }
+
+       /* Stiluri pentru butonul cu săgeată */
+/* Stiluri pentru butonul cu săgeată */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Culoare albă cu transparență */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    backdrop-filter: blur(5px); /* Efect de blur */
 }
 
-.dropdown-menu > li > a {
-  color: #fff;
-  font-size: 18px;
+.back-button a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.dropdown-menu > li > a:hover {
-  background-color: #444;
+/* Stiluri pentru săgeată */
+.back-button span::before {
+    content: "\2190"; /* Codul pentru săgeata la stânga (&larr;) */
+    margin-right: 5px;
+    font-size: 18px;
 }
 
-.dropdown-menu > li > a > font {
-  color: #fff;
-}
-
-    .all-browsers {
-      margin: 0;
-      padding: 15px;
-      background-color: lightgray;
-    }
-
-    .all-browsers > h1,
-    .browser {
-      margin: 10px;
-      padding: 15px;
-    }
-
-    .browser {
-      background: white;
-    }
-
-    .browser > h2,
-    p {
-      margin: 4px;
-      font-size: 100%;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-		align-content: center;
-		justify-content: center;
-		
-	  }
-	  
-	  .mijloc {
-		  padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    text-align: left;
-    margin: 0 auto;
-	  }
-	  
-	
-
-    .content {
-      flex: 1;
-    }
-
-    footer {
-      padding: 10px;
-      background-color: black;
-      color: white;
-      margin-top: auto;
-    }
-
-    .container-fluid {
-      padding-right: 15px;
-      padding-left: 15px;
-      margin-right: auto;
-      margin-left: 0;
-		
-    }
-  </style>
-
-  <style>
-    #container {
-      margin: 0 auto;
-      max-width: 1850px;
-    }
-
-    #content {
-      width: 100%;
-      padding: 0px;
-		
-    }
-  </style>
+    </style>
 </head>
 
 <body>
-  <div class="mijloc">
-	  <br><br><br><br><br><br><br><br><br><br><br>
-	<h2><font face="lora">MIHAILUNGU.COM</font></h2>
-	  <h3>404. <font color="#959595">That's an error.</font></h3>
-	  <br>
-	  <h3>The requested URL /error was not found on this server.</h3>
-	  <h3><font color="#959595">That's al we know.</font></h3>
-	  <h3 id="goBackButton" style="cursor:pointer;"><a>Go to Previous Page</a></h3>
-	</div>
-	<script>
-		document.getElementById('goBackButton').addEventListener('click', function () {
-    window.history.back();
-});</script>
+<div class="mijloc">
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <h2><font face="lora">MIHAILUNGU.COM</font></h2>
+    <h3>404. <font color="#959595">That's an error.</font></h3>
+    <br>
+    <h3>The requested URL /error was not found on this server.</h3>
+    <h3><font color="#959595">That's all we know.</font></h3>
+    <!-- Updated back button with arrow -->
+    <div class="back-button" target="_blank">
+    <a href="#" id="goBackButton" target="_blank">
+        <span> Go to Previous Page</span>
+    </a>
+</div>
+
+
+</div>
+<script>
+    document.getElementById('goBackButton').addEventListener('click', function () {
+        window.history.back();
+    });
+</script>
 <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <font size="4"><p>© <span id="footer-year"></span> <font face="Lora" size="+1">Mihai Lungu</font></p></font>
-        </div>
-        <div class="col-md-6" align="right">
-          <p>
-		   <a href="https://x.com/lungu_mihai03/" target="_blank"><img
-                src="https://media.mihailungu.com/resources/x-logo.png" style="width: 50px;height: 50px" /></a>
-            <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
-                src="https://media.mihailungu.com/resources/linkedin-logo.png" style="width: 50px;height: 50px" /></a>
+        <div class="row">
+            <div class="col-md-6">
+                <font size="4"><p>© <span id="footer-year"></span> <font face="Lora" size="+1">Mihai Lungu</font></p></font>
+            </div>
+            <div class="col-md-6" align="right">
+                <p>
+                    <a href="https://x.com/lungu_mihai03/" target="_blank"><img
+                            src="https://media.mihailungu.com/resources/x-logo.png" style="width: 50px;height: 50px" /></a>
+                    <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
+                            src="https://media.mihailungu.com/resources/linkedin-logo.png" style="width: 50px;height: 50px" /></a>
 
-            <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
-                src="https://media.mihailungu.com/resources/fb-logo.png" style="width: 50px;height: 50px" /></a>
+                    <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
+                            src="https://media.mihailungu.com/resources/fb-logo.png" style="width: 50px;height: 50px" /></a>
 
-            <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
-                src="https://media.mihailungu.com/resources/ig-logo.png" style="width: 50px;height: 50px" /></a>
-          </p>
+                    <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
+                            src="https://media.mihailungu.com/resources/ig-logo.png" style="width: 50px;height: 50px" /></a>
+                </p>
+            </div>
         </div>
-      </div>
-         </div>
-  </footer>
+    </div>
+</footer>
 </body>
-
 </html>
