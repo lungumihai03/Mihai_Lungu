@@ -179,7 +179,12 @@
 	  <br>
 	  <h3>The requested URL /error was not found on this server.</h3>
 	  <h3><font color="#959595">That's al we know.</font></h3>
+	  <h3 id="goBackButton"><a>Go to Previous Page</a></h3>
 	</div>
+	<script>
+		document.getElementById('goBackButton').addEventListener('click', function () {
+    window.history.back();
+});</script>
 <footer>
     <div class="container">
       <div class="row">
