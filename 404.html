@@ -145,6 +145,17 @@
             width: 100%;
             padding: 0px;
         }
+		.img-footer {
+    
+    transition: filter 0.35s ease-in-out;
+}
+
+.img-footer:hover {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+}
+
+	
+		
 
        /* Stiluri pentru butonul cu săgeată */
 /* Stiluri pentru butonul cu săgeată */
@@ -152,12 +163,18 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.2); /* Culoare albă cu transparență */
+    background-color: rgba(255, 255, 255, 0.2); 
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-    backdrop-filter: blur(5px); /* Efect de blur */
+    backdrop-filter: blur(5px);
+    transition: background-color 0.2s ease; 
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .back-button a {
@@ -207,15 +224,15 @@
             <div class="col-md-6" align="right">
                 <p>
                     <a href="https://x.com/lungu_mihai03/" target="_blank"><img
-                            src="https://media.mihailungu.com/resources/x-logo.png" style="width: 50px;height: 50px" /></a>
+                            src="https://media.mihailungu.com/resources/x-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
                     <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
-                            src="https://media.mihailungu.com/resources/linkedin-logo.png" style="width: 50px;height: 50px" /></a>
+                            src="https://media.mihailungu.com/resources/linkedin-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
 
                     <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
-                            src="https://media.mihailungu.com/resources/fb-logo.png" style="width: 50px;height: 50px" /></a>
+                            src="https://media.mihailungu.com/resources/fb-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
 
                     <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
-                            src="https://media.mihailungu.com/resources/ig-logo.png" style="width: 50px;height: 50px" /></a>
+                            src="https://media.mihailungu.com/resources/ig-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
                 </p>
             </div>
         </div>
