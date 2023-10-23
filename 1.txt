@@ -1,0 +1,15 @@
+  <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Despre <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+				
+                  <li><a href="games/index.html"><font  size="+2">Jocuri</font></a></li>
+                  <li><a href="reading/index.html"><font  size="+2">Lectură</font></a></li>
+                  <li><a href="kitchen/index.html"><font  size="+2">Bucătărie</font></a></li>
+                  <li><a href="about-me/index.html"><font  size="+2">Despre mine</font></a></li>
+               
+
+              
+            </ul>
+          </li>
