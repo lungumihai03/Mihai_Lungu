@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Background</title>
+    <style>
+	
+	body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#camera {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+	
+	</style>
+</head>
+<body>
+    <div class="camera-container">
+        <video id="camera" autoplay muted></video>
+    </div>
+    <script>const camera = document.getElementById('camera');
+
+async function startCamera() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' } });
+        camera.srcObject = stream;
+    } catch (error) {
+        console.error('Eroare la accesarea camerei: ', error);
+    }
+}
+
+startCamera();
+</script>
+</body>
+</html>
