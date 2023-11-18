@@ -27,11 +27,33 @@
 	
 		
         .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto;
-            padding: 20px;
-            width: 60%;
-        }
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    width: 65%;
+}
+
+/* Când ecranul are o lățime mai mică de 400px */
+@media only screen and (max-width: 400px) {
+    .modal-content {
+        width: 85%;
+    }
+}
+
+/* Când ecranul are o lățime între 400px și 1200px */
+@media only screen and (min-width: 401px) and (max-width: 1200px) {
+    .modal-content {
+        width: 75%;
+    }
+}
+
+/* Când ecranul are o lățime mai mare de 1200px */
+@media only screen and (min-width: 1201px) {
+    .modal-content {
+        width: 65%;
+    }
+}
+
 
         /* Stiluri pentru imagine */
         #modal-image {
