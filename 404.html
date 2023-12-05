@@ -95,7 +95,7 @@
         }
 
         body {
-			
+			transition: background-color 0.5s ease;
             margin: 0;
             padding: 0;
             display: flex;
@@ -117,7 +117,16 @@
             text-align: left;
             margin: 0 auto;
         }
+.light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
 
+        /* Stiluri pentru modul întunecat (dark mode) */
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
         .content {
             flex: 1;
         }
@@ -195,6 +204,19 @@
 </head>
 
 <body>
+	<script>
+        // Verificăm ora pentru a decide modul de afișare (luminos sau întunecat)
+        const currentHour = new Date().getHours();
+        const body = document.body;
+
+        if (currentHour >= 19 || currentHour < 7) {
+            // Noaptea (după ora 18:00 sau înainte de 06:00) - activăm dark mode
+            body.classList.add("dark-mode");
+        } else {
+            // Ziua - activăm light mode
+            body.classList.add("light-mode");
+        }
+    </script>
 <div class="mijloc">
     <br><br><br><br><br><br><br><br><br><br><br>
     <h2><font face="lora">MIHAILUNGU.COM</font></h2>
