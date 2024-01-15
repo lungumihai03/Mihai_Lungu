@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarii</title>
+    <style>
+	body {
+    font-family: Arial, sans-serif;
+}
+
+#comments-container {
+    margin-top: 20px;
+}
+
+#comment-form {
+    margin-top: 20px;
+}
+
+label, textarea, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.comment {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+	</style>
+</head>
+<body>
+ 
+
+    <!-- Formular pentru adăugarea de comentarii -->
+    <form id="comment-form">
+        <label for="comment-name">Nume:</label>
+        <input type="text" id="comment-name" placeholder="Numele tău" required>
+        
+        <label for="comment-text">Comentariu:</label>
+        <textarea id="comment-text" placeholder="Adaugă un comentariu" required></textarea>
+        
+        <button type="submit">Postează comentariu</button>
+    </form>
+   <div id="comments-container">
+        <!-- Aici vor fi afișate comentariile -->
+    </div>
+    <!-- Firebase -->
+	<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCntcQrQuzVCaKjL_-MU5LXIvFDiZKIVBA",
+    authDomain: "comentarii-site.firebaseapp.com",
+    projectId: "comentarii-site",
+    storageBucket: "comentarii-site.appspot.com",
+    messagingSenderId: "1022416861631",
+    appId: "1:1022416861631:web:22f8d89c2338acc8e2090a",
+    measurementId: "G-7EHXLTZZEL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+    
+<script>
+        // Inițializează Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        document.addEventListener('DOMContentLoaded', function () {
+    const commentForm = document.getElementById('comment-form');
+    const commentsContainer = document.getElementById('comments-container');
+
+    commentForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Obține textul comentariului și numele utilizatorului
+        const commentText = document.getElementById('comment-text').value;
+        const commentName = document.getElementById('comment-name').value;
+
+        // Creează un element pentru comentariu
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('comment');
+
+        // Obține data și ora curentă
+        const currentDate = new Date();
+        const formattedDate = currentDate.toLocaleString();
+
+        // Construiește conținutul comentariului
+        commentElement.innerHTML = `<strong>${commentName}</strong> - ${formattedDate}<br>${commentText}`;
+
+        // Adaugă comentariul în partea de jos a containerului
+        commentsContainer.appendChild(commentElement);
+
+        // Resetează formularul
+        commentForm.reset();
+    });
+});
+ function displayComment(comment) {
+                // Creează un element pentru comentariu
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+
+                // Construiește conținutul comentariului
+                commentElement.innerHTML = `<strong>${comment.name}</strong> - ${comment.date}<br>${comment.text}`;
+
+                // Adaugă comentariul în partea de jos a containerului
+                commentsContainer.appendChild(commentElement);
+            }
+        });
+    </script>
+</body>
+</html>
