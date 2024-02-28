@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^(www\.)?mihailungu\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^(dev\.)?mihailungu\.com$ [NC]
+RewriteRule ^.*$ /404.html [L]
