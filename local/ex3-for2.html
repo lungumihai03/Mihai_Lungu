@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	<h2>Preluarea informatiei din Local Storage</h2>
+	<button onClick="apasa()">Apasa</button>
+	<div id="out"></div>
+	<script>
+		function apasa(){
+	var nume = localStorage.getItem("name");
+		var email = localStorage.getItem("email");
+		var pass = localStorage.getItem("pass");
+		document.getElementById("out").innerHTML = "Nume: " + nume + "<br>" + "Email: " + email + "<br>" + "Parola: " + pass;
+		}
+	
+	</script>
+	
+</body>
+</html>
