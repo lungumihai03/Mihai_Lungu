@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CV - Mihai Lungu</title>
+	 <link rel="icon" type="image/x-icon" href="https://media.mihailungu.com/resources/images/poza.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+		body {
+            font-family: 'Lora', serif;
+        }
+		.navbar-nav > li > a {
+  position: relative;
+}
+.col-md-2 { 
+  max-width: 16.66%; /*  1/6 dintr-un rând în vederile medii sau mai mari */
+  flex: 0 0 16.66%; /* Setați o lățime de bază egală pentru elemente */
+}
+
+		@media (max-width: 768px) { 
+    .col-md-2 {
+        max-width: 50%;  /* Ocupă maxim jumătate din spațiu  în vederile mici  */
+        flex: 0 0 50%;
+    }
+}
+
+.navbar-nav > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-nav > li > a:hover::after {
+  width: 100%;
+  left: 0;
+}
+		.site{
+			margin-left:10vw;
+			margin-right:10vw;
+		}
+		@media (max-width: 768px) {
+  .site {
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .site {
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+}
+		.icon-bar{
+			background-color: black;
+		}
+		.info{
+			padding: 20px;
+		}
+		.about{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+			
+		}
+		.portfolio{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+		}
+		
+		.lang-tot{
+			margin-left: 40px;
+			margin-top: 23px;
+			width: 60%;
+			height: 6px;
+			
+			border-radius: 50px;
+			
+		}
+		.lang-plus {
+  width: 15%;
+  height: 25px; /* Înălțimea inițială */
+  background-color: rgba(11, 107, 0, 1.00);
+  margin-right: 20px;
+  transform: skew(-45deg); /* Rotirea paralelogramului */
+	border-color: black;
+			border: solid 1.5px;
+  /* Media query pentru ecrane de dimensiuni mici */
+  @media screen and (max-width: 768px) {
+    height: 20px; /* Reducem înălțimea pentru ecrane mai mici */
+	  margin-right:10px;
+  }
+			@media screen and (max-width: 500px) {
+    height: 15px; /* Reducem înălțimea pentru ecrane mai mici */
+	  margin-right:6px;
+  }
+}
+		.lang-min {
+  width: 15%;
+  height: 25px; /* Înălțimea inițială */
+  background-color: rgba(255,255,255,1.00);
+  margin-right: 20px;
+  transform: skew(-45deg); /* Rotirea paralelogramului */
+border-color: black;
+			border: solid 1.5px;
+  /* Media query pentru ecrane de dimensiuni mici */
+  @media screen and (max-width: 768px) {
+    height: 20px; /* Reducem înălțimea pentru ecrane mai mici */
+	  margin-right:10px;
+  }
+			@media screen and (max-width: 500px) {
+    height: 15px; /* Reducem înălțimea pentru ecrane mai mici */
+	  margin-right:6px;
+  }
+}
+		
+			
+		.skills-img{
+			width: 38px;
+			height: 38px;
+		}
+		.nav-bar-color-text{
+			color:black;
+			font-size:20px;
+		}
+		.photo{
+			width: 250px;
+			height: 250px;
+			border-radius:200px;
+			border: 2px solid green;
+			box-shadow: 0 0 10px rgba(0,0,0,0.60);
+		}
+		.skills{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+		}
+		.education{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+		}
+		.education h2{
+			margin-left: 15px;
+		}
+		.education h3{
+			margin-left:15px;
+		}
+		.max{
+			background-color: green;
+			height: 2px;
+			margin-right: 15px;
+			margin-bottom: 3px;
+			margin-top: 3px;
+		}
+		
+		.awards{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+			
+		}
+		h3.info{
+			margin-bottom: -5px;
+			margin-top: -25px;
+			margin-left: -18px;
+			
+		}
+		h1.info{
+			margin-bottom: 10px;
+			margin-left: -18px;
+		}
+.total {
+    margin-left: 15px;
+    margin-top: 15px;
+	margin-right: 15px;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(156, 156, 156, 1.00);
+    border-radius: 50px;
+}
+
+.html, .css, .js, .cpp, .csharp, .sql, .python, .office, .adobe {
+    height: 100%;
+    background-color: rgba(11, 107, 0, 1.00);
+    border-radius: 50px;
+    transition: width 4.5s ease; /* Animarea tranziției */
+}
+
+		
+		.for-skills{
+			display: flex;
+			margin-bottom: -10px;
+			
+		}
+		
+		.for-lang{
+			display:flex;
+			
+			
+		}
+		.for-lang h2{
+			margin-top: 3px;
+		}
+		.for-awards{
+			display: flex;
+			
+			
+		}
+		.for-awards h2{
+			margin-top:4px;
+			margin-left:10px;
+		}
+		
+		html {
+    scroll-behavior: smooth;
+}
+		
+	</style>
+	
+<script>
+	
+		// Definim un obiect cu numărul la care vrem să ajungem pentru fiecare limbaj
+var numereDeIncarcat = {
+    html: 64,
+    css: 42,
+    js: 53,
+    cpp: 58,
+    csharp: 73,
+    sql: 24,
+    python: 32,
+	office: 47,
+	adobe: 40
+};
+
+// Funcția care actualizează bara de progres pentru fiecare limbaj
+function incarcaAnimatie() {
+    Object.keys(numereDeIncarcat).forEach(function(limbaj) {
+        var procent = 0; // Inițial, progresul este 0
+        var interval = setInterval(function() {
+            // Creștem procentul până la valoarea dorită pentru limbajul respectiv
+            procent++;
+            document.querySelector('.' + limbaj).style.width = procent + '%';
+            // Dacă am ajuns la numărul dorit, oprim intervalul
+            if (procent >= numereDeIncarcat[limbaj]) {
+                clearInterval(interval);
+            }
+        }, 10); // Viteza de actualizare a barei de progres (10ms în acest caz)
+    });
+}
+
+// Apelăm funcția când documentul este încărcat complet
+document.addEventListener('DOMContentLoaded', incarcaAnimatie);
+
+	
+	</script>
+<script>
+   function updateHeight() {
+        var spanElement = document.getElementById("dynamicHeight");
+        var viewportWidth = window.innerWidth; // Lățimea ferestrei vizibile
+        var viewportHeight = window.innerHeight; // Înălțimea ferestrei vizibile
+        
+        // Calculăm o valoare pentru înălțime bazată pe lățimea și înălțimea ferestrei vizibile
+        var newHeight = (viewportWidth + viewportHeight) / 10;
+        
+        // Setăm noua înălțime
+        spanElement.style.height = newHeight + "px";
+    }
+
+    // Apelăm funcția pentru a seta înălțimea inițială și pentru a reacționa la redimensionarea ferestrei
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+</script>
+   <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        span.t {
+        background: #fff;
+        border-radius: 7px;
+        box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+        display: grid;
+        
+    }
+
+	   .mp{
+		   width: 90%;
+		   height: 90%;
+	   }
+	   .mp_1{
+		   width: 70%;
+		   height:70%;
+	   }
+        img.land {
+            border-radius: 4px;
+            width: 96%;
+            height: 96%;
+            object-fit: cover;
+			cursor: pointer;
+        }
+
+        span.template-sidebar--left {
+            grid-template: 
+                "sidebar mainA mainA"
+                "sidebar mainB mainB";
+        }
+
+        span.template-sidebar--left > :nth-child(1) {
+            grid-area: sidebar;
+        }
+
+        span.template-sidebar--right {
+            grid-template: 
+                "mainA mainA sidebar"
+                "mainB mainB sidebar";
+        }
+
+        span.template-sidebar--right > :nth-child(3) {
+            grid-area: sidebar;
+        }
+    </style>
+
+
+<style>
+	a{
+		color:rgba(19,185,0,1.00);
+	}
+	a:hover{
+		color:rgba(11, 107, 0, 1.00);
+	}
+	
+	</style>
+
+	<style>
+	
+		.button {
+  margin: 10px;
+			background-color: green;
+			width: 320px;
+			height: 40px;
+			color:white;
+			border: none;
+			box-shadow: 0 0 15px rgba(0,0,0,0.50);
+			transition: box-shadow 0.75s ease-in-out;
+			
+}
+		.button:hover{
+			transition: background-color: 0.75s ease-in-out;
+			background-color: #006712;
+			box-shadow: 0 0 20px rgba(0,0,0,0.70);
+			
+		}
+	
+	</style>
+<style>
+        /* Stilurile pentru fereastra modală */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            width: 50%;
+        }
+
+        /* Stiluri pentru imagine */
+        #modal-image {
+            width: 50%;
+            float: right;
+            margin-right: 10px;
+        }
+
+        /* Stiluri suplimentare */
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+	<nav class="navbar navbar-btn">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" id="menuButton" data-toggle="collapse" data-target="#myNavbar">
+  <span class="icon-bar top-bar"></span>
+  <span class="icon-bar middle-bar"></span>
+  <span class="icon-bar bottom-bar"></span>
+</button>
+
+        <a class="navbar-brand" href="https://mihailungu.com"><img src="https://media.mihailungu.com/resources/images/poza.jpg" class="confirmed"
+            style="width:45;height:30px;" /></a>
+        <a class="navbar-brand nav-bar-color-text" href="https://mihailungu.com"><font face="Lora">Mihai Lungu</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+       
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+			<a class="nav-bar-color-text" href="#about">About</a>
+			</li>
+			<li>
+			<a class="nav-bar-color-text" href="#education">Education</a>
+			</li>
+			<li>
+			<a class="nav-bar-color-text" href="#skills">Skills</a>
+			</li>
+			<li>
+			<a class="nav-bar-color-text" href="#awards">Awards</a>
+			</li>
+			<li>
+			<a class="nav-bar-color-text" href="#portfolio">Portfolio</a>
+			</li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+	<div class="site">
+	<div class="about" id="about">
+		
+			<div class="row">
+				
+				
+		<div class="col-md-6 col-lg-3" align="center"><br>
+			<img src="https://media.mihailungu.com/resources/images/m.png" class="photo">
+			<h2>Mihai Lungu</h2>
+			</div>
+			<div class="col-md-6 info">
+				<h1 class="info">Hello, i am backend developer in .NET</h1>
+				<h3 class="info">Date of birth: 22/11/2003</h3>
+				<h3 class="info">Nationality: Moldovan</h3>
+				<h3 class="info">Gender: Male</h3>
+				<h3 class="info">Phone: <a href="tel:+37369902230">+37369902230</a></h3>
+				<h3 class="info">Email address: <a href="mailto:lungu.mihai03@gmail.com">lungu.mihai03@gmail.com</a></h3>
+				<h3 class="info">Email address: <a href="mailto:lungu.mihai@mihailungu.com">lungu.mihai@mihailungu.com</a></h3>
+				<img onClick="window.open('https://www.linkedin.com/in/lungu-mihai03/')" src="https://media.mihailungu.com/resources/skills/linkedin.png" class="skills-img" style="cursor:pointer;">&nbsp;&nbsp;
+				<img onClick="window.open('https://github.com/lungumihai03')" src="https://media.mihailungu.com/resources/skills/github.png" class="skills-img" style="cursor:pointer;">
+			</div>
+		
+		</div>
+		<div class="for-lang">
+		<img src="https://media.mihailungu.com/resources/icon/lang.png" width="34px" height="34px"> <div><h2>&nbsp;Language:</h2></div>
+		</div>
+		
+		<div class="for-skills">
+		
+			
+			<h3>Romanian</h3>
+			
+			
+			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div> </div></div>
+			
+			
+		</div>
+
+		<div class="for-skills">
+		
+			<h3>Russian</h3>
+			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-min"></div> </div></div>
+			
+			
+			</div>
+		
+		<div class="for-skills">
+		
+			<h3>French</h3>
+			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-min"></div><div class="lang-min"></div><div class="lang-min"></div><div class="lang-min"></div> </div></div>
+			</div>
+		
+		
+		<div class="for-skills">
+		
+			<h3>English</h3>
+			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-min"></div><div class="lang-min"></div><div class="lang-min"></div> </div></div>
+		</div>
+		<br>
+	</div>
+		<div class="education" id="education">
+			
+			<h2><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size:24px;"></i>&nbsp;Education:</h2>
+			
+			
+			<h3>01/09/2009 – 31/05/2022 Soroca, Moldova<br>
+				<b>PRIMARY, SECONDARY AND HIGH SCHOOL EDUCATION</b> Liceul Teoretic ”Constantin Stere”<br>
+				<hr class="max">
+Address Dimitrie Cantemir, MD-3005, Soroca, Moldova Website <a href="http://ltcstere.md/">ltcstere.md</a></h3>
+			<h3>05/2022 – 05/2022 Soroca, Moldova<br>
+				<b>THE DIGITAL MANUFACTURING WORKSHOP</b> Solidarity FabLab Soroca<br>
+				<hr class="max">
+Address str. Mihai Kogalniceanu 9, MD-3005, Soroca, Moldova</h3>
+			<h3>01/09/2022 – CURRENT Chișinău, Moldova<br>
+				<b>UNDERGRADUATE STUDIES, FMTI, COMPUTER SCIENCE</b> Universitatea Pedagogică de Stat ”Ion
+Creangă” din Chișinău<br>
+				<hr class="max">
+Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="https://www.upsc.md">www.upsc.md</a></h3>
+		
+		</div>
+	<div class="skills" id="skills">
+		
+				
+			
+				<h2><img src="https://th.bing.com/th/id/R.9bca78bbaa3c5c8942e2173d452abe0b?rik=P03FINvVA0Kn8w&riu=http%3a%2f%2fgetdrawings.com%2fvectors%2fskills-icon-vector-24.png&ehk=%2bmb0zSoFHzJQ4HuI5psFs2h6Mox8r3cuxgTRhJ9IYPs%3d&risl=&pid=ImgRaw&r=0" width="30px" height="30px">  Skills:</h2>
+		<br>
+			
+		
+		
+		<div class="for-skills">
+		
+			<img src="https://media.mihailungu.com/resources/skills/html.png" class="skills-img">
+			<div class="total"><div class="html"></div></div>
+			
+		</div><br>
+	
+		<div class="for-skills">
+		<img src="https://media.mihailungu.com/resources/skills/css.png" class="skills-img"> 
+		<div class="total"><div class="css"></div></div>
+			</div><br>
+
+		
+		<div class="for-skills">
+		<img src="https://media.mihailungu.com/resources/skills/js.png" class="skills-img">
+		<div class="total"><div class="js"></div></div>
+			
+		</div><br>
+
+			<div class="for-skills">
+		<img src="https://media.mihailungu.com/resources/skills/cpp.png" class="skills-img">
+		<div class="total"><div class="cpp"></div></div>
+			
+		</div><br>
+
+				<div class="for-skills">
+		<img src="https://media.mihailungu.com/resources/skills/c-sharp.png" class="skills-img">
+		<div class="total"><div class="csharp"></div></div>
+			
+		</div><br>
+
+					<div class="for-skills">
+		<img src="https://media.mihailungu.com/resources/skills/sql.png" class="skills-img">
+		<div class="total"><div class="sql"></div></div>
+			
+		</div><br>
+
+						<div class="for-skills">
+		<img src="https://media.mihailungu.com/resources/skills/python.png" class="skills-img">
+		<div class="total"><div class="python"></div></div>
+			
+		</div><br>
+		
+		<div class="for-skills">
+		<img src="https://res.cdn.office.net/officehub/images/content/images/favicon_m365-31d62b976c.ico" class="skills-img">
+		<div class="total"><div class="office"></div></div>
+	</div><br>
+		
+		<div class="for-skills">
+		<img src="https://yt3.ggpht.com/-QYVbC9TuWuo/AAAAAAAAAAI/AAAAAAAAAAA/qRWo9AJfx60/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" class="skills-img">
+		<div class="total"><div class="adobe"></div></div>
+	</div><br>
+		</div>
+		
+		<div class="awards" id="awards">
+			<div class="for-awards">
+		<img src="https://media.mihailungu.com/resources/icon/award.png" width="30px" height="43px">
+			<h2>Awards:</h2>
+				
+		</div>
+			<span class="template-sidebar--right t" id="dynamicHeight">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat7.png" onClick="window.open('https://www.mihailungu.com/achievements/certificat7.png')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat6.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat6.jpg')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-5.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma5.jpg')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat8.png" onClick="window.open('https://www.mihailungu.com/achievements/certificat8.png')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat5.png" onClick="window.open('https://www.mihailungu.com/achievements/certificat5.png')">
+    </span>
+	<br>
+	
+    <span class="template-sidebar--left t" id="dynamicHeight">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-3.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-3.jpg')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-4.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-4.jpg')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat4.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat4.jpg')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat3.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat3.png')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat2.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat2.jp')">
+    </span>
+	<br>
+	
+
+	 <span class="template-sidebar--right t" id="dynamicHeight">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat.jpg')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-1.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-1.jpg')">
+        <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-2.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-2.jpg')">
+    </span>
+			</div>
+		
+		<div class="portfolio" id="portfolio">
+		<h2 title="Portofolio pentru programe Portofolio pentru programe Portofolio pentru programe Portofolio pentru programePortofolio pentru programe Portofolio pentru programe Portofolio pentru programe">Portfolio</h2>
+				<h3>Here are my works in C# with the .NET framework.</h3>
+			<center><div class="row">
+			<div class="col-md-6">
+				<button class="button" onClick="mp3_mod()"><span>Mp3 Player</span></button>
+				</div>
+				<div class="col-md-6">
+				<button class="button" onClick="calc_mod()"><span>Calculator</span></button>
+				</div>
+				
+			</div>
+			</center>
+			<center><div class="row">
+			<div class="col-md-6">
+				<button class="button" onClick="about_mod()"><span>About PC</span></button>
+				</div>
+				<div class="col-md-6">
+				<button class="button" onClick="gen_mod()"><span>Genetic Algorithms</span></button>
+				</div>
+				
+			</div>
+			</center>
+			<center><div class="row">
+			<div class="col-md-6">
+				<button class="button" onClick="hr_mod()"><span>HR app</span></button>
+				</div>
+				<div class="col-md-6">
+				<button class="button" onClick="tr_mod()"><span>Technical Review</span></button>
+				</div>
+				
+			</div>
+			</center>
+			<center><div class="row">
+			<div class="col-md-6">
+				<button class="button" onClick="note_mod()"><span>Notepad</span></button>
+				</div>
+				<div class="col-md-6">
+				<button class="button" onClick="tts_mod()"><span>Text to Speech</span></button>
+				</div>
+				
+			</div>
+			</center>
+			<h3>Here are my projects in web frontend.</h3>
+			<center><div class="row">
+			<div class="col-md-6">
+				<button class="button" onClick="mihai_mod()"><span>Personal Site</span></button>
+				</div>
+				<div class="col-md-6">
+				<button class="button" onClick="tpa_mod()"><span>TPA</span></button>
+				</div>
+				
+			</div>
+			</center>
+			<center><div class="row">
+			<div class="col-md-6">
+				<button class="button" onClick="dev_mod()"><span>Dev Platform</span></button>
+				</div>
+				<div class="col-md-6">
+				<button class="button" onClick="fmti_mod()"><span>FMTI Site</span></button>
+				</div>
+				
+			</div>
+			</center>
+			
+			
+			
+			
+			<div id="mp3" class="modal" onclick="closemp3(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">Mp3 Player</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/mp3-player.png" class="mp">
+				</div>
+				</center>
+				<h3>A simple music player application with basic playback and playlist management functions.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="calc" class="modal" onclick="closecalc(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">Calculator</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/calc.png" class="mp">
+				</div>
+				</center>
+				<h3>The calculator is a simple application that allows users to perform basic mathematical calculations.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="aboutpc" class="modal" onclick="closeabout(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">About PC</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/about.png" class="mp">
+				</div>
+				</center>
+				<h3>This application shows you information about your computer, such as the processor, RAM, graphics card, storage space, operating system, and motherboard.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="gen" class="modal" onclick="closegen(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">Genetic Algorithms</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/gen.png" class="mp">
+				</div>
+				</center>
+				<h3>This application is a genetic calculator. It allows the user to input a function and the interval over which they want to calculate it. The application will then compute the value of the function for each value in the interval.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="hr" class="modal" onclick="closehr(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">HR App</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/res.png" class="mp">
+				</div>
+				</center>
+				<h3>This is a complex human resources application that allows comprehensive management of employee information, including registration, documents, leaves, and career progression. The application automatically calculates salaries and generates payslips, while also enabling advanced data analysis.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="tr" class="modal" onclick="closetr(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">Technical Review</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/tr.png" class="mp">
+				</div>
+				</center>
+				<h3>This is a car management application. It allows the user to add, view, renew inspections, and delete cars from the database. The application also has an "About" section, which provides information about the application and the developer.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="note" class="modal" onclick="closenote(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">Notepad</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/note.png" class="mp">
+				</div>
+				</center>
+				<h3>This is a text editing application. You can use it to create and edit text files.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="tts" class="modal" onclick="closetts(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">Text to Speech</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/tts.png" class="mp">
+				</div>
+				</center>
+				<h3>This is a text-to-speech application. You can use it to convert text into speech.</h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="mihai" class="modal" onclick="closemihai(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">Personal Site</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/site.png" class="mp">
+				</div>
+				</center>
+				<h3>This is my personal website created out of interest in programming. <a href="https://mihailungu.com" target="_blank">Go to website...</a></h3>
+				
+            </div>
+            
+        </div>
+    </div>
+		
+			<div id="tpa" class="modal" onclick="closetpa(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">TPA Site</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/tpa.png" class="mp">
+				</div>
+				</center>
+				<h3>This is the website for posting homework assignments for web programming subjects. <a href="https://tpa.mihailungu.com" target="_blank">Go to website...</a></h3>
+				
+            </div>
+            
+        </div>
+    </div>	
+			<div id="dev" class="modal" onclick="closedev(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">DEV Platform</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/dev.png" class="mp">
+				</div>
+				</center>
+				<h3>This is a website for programming in various languages. <a href="https://dev.mihailungu.com" target="_blank">Go to website...</a></h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			<div id="fmti" class="modal" onclick="closefmti(event)">
+        <div class="modal-content">
+            <div>
+                
+				<h1 align="center">FMTI Site</h1>
+				<center><div class="mp_1">
+				<img src="portfolio/fmti.png" class="mp">
+				</div>
+				</center>
+				<h3>This is the website of the faculty created by me, containing various information for students. <a href="https://fmti.mihailungu.com" target="_blank">Go to website...</a></h3>
+				
+            </div>
+            
+        </div>
+    </div>
+			
+			
+		</div>
+	</div>
+	
+	<script>
+	
+		function mp3_mod(){
+			document.getElementById("mp3").style.display = "block";
+		}
+		function closemp3(event) {
+            if (event.target === document.getElementById("mp3")) {
+                document.getElementById("mp3").style.display = "none";
+            }
+        }
+		function calc_mod(){
+			document.getElementById("calc").style.display = "block";
+		}
+		function closecalc(event) {
+            if (event.target === document.getElementById("calc")) {
+                document.getElementById("calc").style.display = "none";
+            }
+        }
+		function about_mod(){
+			document.getElementById("aboutpc").style.display = "block";
+		}
+		function closeabout(event) {
+            if (event.target === document.getElementById("aboutpc")) {
+                document.getElementById("aboutpc").style.display = "none";
+            }
+        }
+		function gen_mod(){
+			document.getElementById("gen").style.display = "block";
+		}
+		function closegen(event) {
+            if (event.target === document.getElementById("gen")) {
+                document.getElementById("gen").style.display = "none";
+            }
+        }
+		function hr_mod(){
+			document.getElementById("hr").style.display = "block";
+		}
+		function closehr(event) {
+            if (event.target === document.getElementById("hr")) {
+                document.getElementById("hr").style.display = "none";
+            }
+        }
+		function tr_mod(){
+			document.getElementById("tr").style.display = "block";
+		}
+		function closetr(event) {
+            if (event.target === document.getElementById("tr")) {
+                document.getElementById("tr").style.display = "none";
+            }
+        }
+		function note_mod(){
+			document.getElementById("note").style.display = "block";
+		}
+		function closenote(event) {
+            if (event.target === document.getElementById("note")) {
+                document.getElementById("note").style.display = "none";
+            }
+        }
+		function tts_mod(){
+			document.getElementById("tts").style.display = "block";
+		}
+		function closetts(event) {
+            if (event.target === document.getElementById("tts")) {
+                document.getElementById("tts").style.display = "none";
+            }
+        }
+		function mihai_mod(){
+			document.getElementById("mihai").style.display = "block";
+		}
+		function closemihai(event) {
+            if (event.target === document.getElementById("mihai")) {
+                document.getElementById("mihai").style.display = "none";
+            }
+        }
+		function tpa_mod(){
+			document.getElementById("tpa").style.display = "block";
+		}
+		function closetpa(event) {
+            if (event.target === document.getElementById("tpa")) {
+                document.getElementById("tpa").style.display = "none";
+            }
+        }
+		function dev_mod(){
+			document.getElementById("dev").style.display = "block";
+		}
+		function closedev(event) {
+            if (event.target === document.getElementById("dev")) {
+                document.getElementById("dev").style.display = "none";
+            }
+        }
+		function fmti_mod(){
+			document.getElementById("fmti").style.display = "block";
+		}
+		function closefmti(event) {
+            if (event.target === document.getElementById("fmti")) {
+                document.getElementById("fmti").style.display = "none";
+            }
+        }
+		
+		
+		
+	</script>
+</body>
+</html>
