@@ -1,0 +1,44 @@
+Sub ValoriPermise()
+
+' Se definește celula țintă
+Dim celulaTarget As Range
+Set celulaTarget = Range("B2") ' Modificați B2 cu celula dorită
+
+' Se definește o variabilă pentru a stoca valoarea introdusă
+Dim valoareIntrodusa As String
+
+' Se verifică dacă celula țintă este selectată
+If Not celulaTarget.Selected Then Exit Sub
+
+' Se obține valoarea introdusă în celula țintă
+valoareIntrodusa = celulaTarget.Value
+
+' Se verifică dacă valoarea introdusă este permisă
+On Error Resume Next ' Ignorarea erorilor la verificarea valorilor
+If Not IsInList(valoareIntrodusa, Array("C6", "C3B", "C3A", "C4", "C5", "C1")) Then
+    ' Valoarea introdusă nu este permisă, se afișează un mesaj de eroare
+    MsgBox "Valoarea introdusă nu este permisă. Introduceți una dintre următoarele valori: " & Join(Array("C6", "C3B", "C3A", "C4", "C5", "C1"), ", ")
+    ' Se șterge valoarea introdusă
+    celulaTarget.ClearContents
+    Exit Sub
+End If
+On Error GoTo 0 ' Rezolvarea erorilor
+
+' Valoarea introdusă este permisă, se continuă execuția macro-ului
+
+End Sub
+
+Function IsInList(valoare As String, listaValori() As Variant) As Boolean
+
+' Se verifică dacă valoarea este prezentă în lista de valori permise
+For Each valoarePermisa In listaValori
+    If valoarePermisa = valoare Then
+        IsInList = True
+        Exit Function
+    End If
+Next valoarePermisa
+
+' Valoarea nu este prezentă în lista de valori permise
+IsInList = False
+
+End Function
