@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ro">
+<!-- Home page in romanian mihailungu.com -->
+<head>
+  <title>Acasă</title>
+  <link rel="icon" type="image/x-icon" href="https://media.mihailungu.com/resources/images/poza.jpg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<meta name="mailru-domain" content="2qEeo5IFydQN8I5d" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SX3YCGP2CS"></script>
+	
+	<link rel="stylesheet" href="style.css">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SX3YCGP2CS');
+</script>
+	
+ <style>
+	 /* inceput style pentru site*/
+	 .responsive-image {
+  max-width:70%; 
+  height: auto;
+  width: auto\9; /* IE8 */
+}
+	 /* Facem imaginea responsive în funcție de lățimea ecranului */
+@media (max-width: 767px) {
+  .responsive-image {
+    width: 50vw; /* ajustați valoarea după preferință */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .responsive-image {
+    width: 40vw; /* ajustați valoarea după preferință */
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-image {
+    width: 30vw; /* ajustați valoarea după preferință */
+  }
+}
+	 
+	 
+	 
+	 .premii{
+		 color:black;
+		 font-style: oblique;
+	 }
+	 .premii:hover{
+		 color:rgba(92,64,27,1.00);
+	 }
+	 .dark-mode .premii{
+		 color:white;
+	 }
+	 .dark-mode .premii:hover{
+		 color:rgba(231,189,161,1.00)
+	 }
+	 .vremea{
+		 border-radius: 20px;
+		 margin-right: 15px;
+		 margin-left: 15px;
+		 border: 0.5px solid rgba(222,196,154,1);
+		 box-shadow: 0 0 20px rgba(222,196,154, 0.5);
+	 }
+	.dark-mode  .vremea{
+		 border-radius: 20px;
+		 margin-right: 15px;
+		 margin-left: 15px;
+		 border: 0.5px solid white;
+		box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+	 }
+
+
+	 .drep {
+		 padding: 10px;
+		 width: auto;
+		 height:auto;
+		 background-color: rgba(222,196,154,0.20);
+		 border: 0.5px solid rgba(222,196,154,1);
+		 border-radius: 20px;
+		  box-shadow: 0 0 20px rgba(222,196,154, 0.5);
+		 
+	 }
+	 .dark-mode .drep{
+		 width: auto;
+		 height:auto;
+		 background-color: rgba(255,255,255,0.10);
+		 border: 0.5px solid white;
+		 border-radius: 20px;
+		  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+	 }
+
+	
+	
+	 .photo {
+		 border-radius: 20px;
+	 }
+	 /* sfarsit 1 */
+	 
+	 
+	 
+	.navbar-nav > li > a {
+  position: relative;
+}
+
+.navbar-nav > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-nav > li > a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+	 #weather{
+		 font-size:20px;
+		 color:white;
+	 }
+
+	</style>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+  </style>
+
+  
+</head>
+
+<body>
+
+
+
+
+
+	
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" id="menuButton" data-toggle="collapse" data-target="#myNavbar">
+  <span class="icon-bar top-bar"></span>
+  <span class="icon-bar middle-bar"></span>
+  <span class="icon-bar bottom-bar"></span>
+</button>
+
+        <a class="navbar-brand" href=""><img src="https://media.mihailungu.com/resources/images/poza.jpg" class="confirmed"
+            style="width:45;height:30px;" /></a>
+        <a class="navbar-brand" href=""><font face="Lora">Mihai Lungu</font></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="">Acasă</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Despre <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              
+                
+				
+                  <li><a href="games/"><font  size="+1">Jocuri</font></a></li>
+                  <li><a href="reading/"><font  size="+1">Lectură</font></a></li>
+                  
+                  <li><a href="about-me/"><font  size="+1">Despre mine</font></a></li>
+               
+
+              
+            </ul>
+          </li>
+		
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+			<li><a id="weather"></a></li>
+		
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><img src="https://media.mihailungu.com/resources/ro-flag.png" class="confirmed" style="width: 25px;height:15px;"/>&nbsp;&nbsp;RO <span class="caret"></span></a>
+            <ul class="dropdown-menu " style="width:50%" >
+				
+              <li><a href="en/"><img src="https://media.mihailungu.com/resources/en-flag.png" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font size="-1">EN</font></a></li>
+              <li><a href="ru/"><img src="https://media.mihailungu.com/resources/ru-flag.jpg" class="confirmed" style="width: 25px;height:15px;" />&nbsp;&nbsp;<font size="-1">RU</font></a></li>
+				
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+	<script>
+	function updateWeather(city) {
+    const apiKey = '04566de59fbd73d73c1b5add6f62f985'; // Replace with your OpenWeatherMap API key
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const temperature = Math.round(data.main.temp); // Round temperature
+            const weather = `${city} ${temperature}°C`;
+            document.getElementById('weather').textContent = weather;
+        })
+        .catch(error => console.error('Error fetching weather data:', error));
+}
+
+function getCityByIP() {
+    const url = 'https://ipinfo.io/json?token=bd985d37445d24'; // Replace with your ipinfo.io token
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const city = data.city;
+            updateWeather(city);
+        })
+        .catch(error => console.error('Error fetching IP info:', error));
+}
+
+
+getCityByIP();
+	</script>
+<script>
+
+const currentHour = new Date().getHours();
+const body = document.body;
+
+body.classList.toggle("dark-mode", currentHour >= 20 || currentHour < 7);
+body.classList.toggle("light-mode", !(currentHour >= 20 || currentHour < 7));
+
+	</script>
+  <font size="6.5" color="white">.</font>
+
+  <img src="https://media.mihailungu.com/resources/images/cetate.png" alt="Source Wikipedia.org" title="Source Wikipedia.org">
+
+<link rel="stylesheet" href="https://media.mihailungu.com/resources/newyear/style.css">
+<script type="text/javascript" src="https://media.mihailungu.com/resources/newyear/newyear.js"></script>
+  <div class="mijloc">
+<br>
+
+	  
+    <div id="content" class="container">
+		
+	  <div class="row " >
+		  
+		<div class="col-md-6 col-lg-2" align="center" >
+			<div class="drep"><br>
+
+			<img src="https://media.mihailungu.com/resources/images/mihai.jpg"   class="photo confirmed responsive-image">
+			<font face="Lora" size="5"><p>Lungu Mihai</p></font>
+			<div class="col-md-6 col-lg-9">&nbsp;</div>
+			</div>
+		</div>
+		  <br>
+		<div class="col-md-6 col-lg-10"  >
+			<div class="drep"><br>
+
+		<font size="4"><p>Biografie:</p>
+<p>Eu m-am născut pe data de 22 noiembrie 2003 în Centrul mamei și copilului din or. Chișinău .</p>
+<p>2007-2010 grădinița nr. 16 Izvoraș Soroca-Nouă or. Soroca.</p>
+<p>2010-2014 clasele primare IPLT “C. Stere” or. Soroca.</p>
+<p>2014-2019 gimnaziul IPLT “C. Stere” or. Soroca.</p>
+<p>2019-2022 studiile liceale IPLT “C. Stere” or. Soroca.</p>
+<p>2022-prezent studii de licență UPSC FMTI Informatica</p></font><br>
+
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-9">&nbsp;</div>
+		
+			
+	  </div>
+	  <div class="row">
+			<div class="col-md-8">
+				<div class="drep">
+					<br>
+			 <font size="4"><p>Premii:</p>
+				 
+				<p>2023 - <b><a href="https://www.mihailungu.com/achievements/certificat5.png" target="_blank" class="premii"><u>Certificat</u></a></b> de voluntariat pentru implicare și suport la activitățile de pregătire pentru competiția FIRST LEGO League Explore și Challenge MasterPiece Moldova 2024, în cadrul Centrului Național de Inovații în Educație " Clasa Viitorului"</p>
+				 <p>2023 - <a href="https://www.mihailungu.com/achievements/diploma-4.jpg" target="_blank" class="premii"><u>locul 2</u></a> pentru ingeniozitate remarcabilă și strategie eficientă în abordarea provocărilor educaționale complexe în cadrul evenimentului "Inovații în Educație: Transformarea procesului educațional prin tehnologie și creativitate", desfășurat în perioada 11-12 noiembrie 2023, la FCL Moldova.</p>
+<p>2023 - <a href="https://www.mihailungu.com/achievements/certificat4.jpg" target="_blank" class="premii"><u>certificat</u></a> pentru participarea la conferința științifică internațională „ABORDĂRI INTER/TRANSDISCIPLINARE ÎN PREDAREA ȘTIINȚELOR REALE (CONCEPT STEAM)”</p>
+<p>2023 - <a href="https://www.mihailungu.com/achievements/certificat3.png" target="_blank" class="premii"><u>certificat</u></a> pentru implicare activă și contribuție valoroasă în calitate de participant la STARTUP WEEKEND</p>
+
+<p>2023 - <a href="https://www.mihailungu.com/achievements/diploma-3.jpg" target="_blank" class="premii"><u>locul 1</u></a> la olimpiada interuniversitară de informatică UPSC</p>
+
+<p>2023 - <a href="https://www.mihailungu.com/achievements/certificat2.jpg" target="_blank" class="premii"><u>certificat</u></a> pentru participarea la conferința ștințifică națională a studenților cu participare internațională ”Probleme și soluții în știința contemporană” UPSC</p>
+
+<p>2022 - <a href="https://www.mihailungu.com/achievements/certificat.jpg" target="_blank" class="premii"><u>certificat</u></a> pentru participarea la atelierele de manufactură digitală Solidarity FabLab Soroca</p>
+
+<p>2022 - locul 2 la olimpiada de informatică locală IPLT “C. Stere”</p>
+
+<p>2021 - <a href="https://www.mihailungu.com/achievements/diploma-1.jpg" target="_blank" class="premii"><u>locul 1</u></a> la olimpiada de informatică în regim online realizată în cadrul universității pedagogice de stat ,,Ion Creangă''  din Chișinău</p>
+
+<p>2020 - <a href="https://www.mihailungu.com/achievements/diploma-2.jpg" target="_blank" class="premii"><u>mențiune</u></a> la olimpiada de informatică raională IPLT “P. Rareș”</p>
+
+<p>2020 - locul 2 la olimpiada de informatică locală IPLT “C. Stere”</p><br>
+
+</font>
+			</div>
+			</div>
+			<div class="col-md-6 col-lg-9">&nbsp;</div>
+			<div>
+			<a class="weatherwidget-io" href="https://forecast7.com/en/44d4326d10/Bucharest/" data-label_1="BUCHAREST" data-label_2="WEATHER" data-theme="original" >BUCHAREST WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+			</div>
+			
+			
+			
+			<div class="col-md-6 col-lg-9">&nbsp;</div>
+			
+			
+		</div>
+			
+	
+
+    </div>
+</div>
+	
+    <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <font size="4"><p>© <span id="footer-year"></span> <font face="Lora" size="+1">Mihai Lungu</font></p></font>
+        </div>
+        <div class="col-md-6" align="right">
+          <p>
+		   <a href="https://x.com/lungu_mihai03/" target="_blank"><img
+                src="https://media.mihailungu.com/resources/x-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
+            <a href="https://www.linkedin.com/in/lungu-mihai03/" target="_blank"><img
+                src="https://media.mihailungu.com/resources/linkedin-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
+
+            <a href="https://www.facebook.com/lungu.mihai03" target="_blank"><img
+                src="https://media.mihailungu.com/resources/fb-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
+
+            <a href="https://www.instagram.com/lungu.mihai03/" target="_blank"><img
+                src="https://media.mihailungu.com/resources/ig-logo.png" style="width: 50px;height: 50px" class="img-footer"/></a>
+          </p>
+        </div>
+      </div>
+         </div>
+  </footer>
+
+</body>
+
+</html>
