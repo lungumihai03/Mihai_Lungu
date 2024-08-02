@@ -141,14 +141,61 @@
  </font>
 			
 			</div>
+			<div class="col-md-6 col-lg-9">&nbsp;</div>
 			</div>
+			
+			
 			<div class="col-md-4">
-				<div>
-			<a class="weatherwidget-io vreme" href="https://forecast7.com/ro/47d0128d86/chisinau/" data-label_1="CHIȘINĂU" data-label_2="Vremea" data-icons="Climacons Animated" data-theme="weather_one" >CHIȘINĂU Vremea</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
-			</div>	
+				<div class="weather-app">
+        <div class="search-bar">
+            <input type="text" id="city" placeholder="Enter city name">
+        </div>
+        <div class="current-weather">
+    <div class="current-weather-left">
+        <div class="location"></div>
+        <div class="weather-temp"></div>
+    </div>
+    <div class="current-weather-right">
+        <div class="weather-icon"></div>
+        <div class="weather-desc"></div>
+        <div class="date">
+            <div class="date-dayname"></div>
+            <div class="date-day"></div>
+        </div>
+    </div>
+           
+        </div>
+					 <div class="details">
+                <div class="humidity">Humidity: <span class="value"></span></div>
+                <div class="wind">Wind Speed: <span class="value"></span></div>
+            </div>
+        <div class="forecast">
+            <div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="day-icon"></div>
+                <div class="day-temp"></div>
+            </div>
+			<div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="day-icon"></div>
+                <div class="day-temp"></div>
+            </div>
+			<div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="day-icon"></div>
+                <div class="day-temp"></div>
+            </div>
+			<div class="forecast-day">
+                <div class="day-name"></div>
+                <div class="day-icon"></div>
+                <div class="day-temp"></div>
+            </div>
+            <!-- Repeat the above block for as many days as you want to show -->
+        </div>
+    </div>
+				<link rel="stylesheet" href="https://media.mihailungu.com/resources/sites/mihai-lungu/weather.css">
+  <script src="https://media.mihailungu.com/resources/sites/mihai-lungu/weather.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 			<br>&nbsp;
 			<div class="converter">
         <h2>Валютный курс (MDL)</h2>
