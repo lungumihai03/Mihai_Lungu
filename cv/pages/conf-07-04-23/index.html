@@ -25,6 +25,8 @@
                 color: white;
                 text-align: left;
                 padding: 10px;
+                width: auto;
+                height: auto;
             }
             .f{
                 color: blue;
@@ -43,11 +45,10 @@
                 padding-bottom: 20px;
                 padding-right: 20px;
             }
-            .row{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+           .row{
+            margin-left:0;
+            margin-right:0;
+           }
             .certificat{
                 max-width: 90%;
                 max-height: 90%;
@@ -55,7 +56,7 @@
             .cert-text{
                 padding-left: 40px;
                 padding-right: 40px;
-                padding-bottom: 40px;
+                padding-bottom: 20px;
             }
         </style>
     </head>
@@ -65,17 +66,44 @@
     </div>
     
     <div class="info">
+        <center>
     <h3>
         Conferința ștințifică națională a studenților cu participare
         internațională ”Probleme și soluții în știința contemporană”
     </h3>
+</center>
 </div>
 <div class="row">
     
     <div class="col-md-5 ">
         <center>
             <br>
-        <img class="certificat"src="https://www.mihailungu.com/achievements/certificat2.jpg">
+        <img class="certificat"src="https://www.mihailungu.com/achievements/certificat2.jpg" style="cursor: pointer;">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Certificat</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="https://www.mihailungu.com/achievements/certificat2.jpg" class="img-responsive">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+        $(".certificat").click(function(){
+            $("#myModal").modal();
+        });
+    });
+    </script>
     </center>
     </div>
     <div class="col-md-6 cert-text">
