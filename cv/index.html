@@ -12,6 +12,9 @@
  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<style>
+
+
+
 		body {
             font-family: 'Lora', serif;
         }
@@ -62,6 +65,15 @@
     margin-right: 7vw;
   }
 }
+		.date{
+			font-size: 17px;
+			color:rgba(107, 107, 107, 1)
+		}
+		.info-awards{
+			margin-top: 1px;
+			font-size: 20px;
+			color:rgb(0, 0, 0)
+		}
 		.icon-bar{
 			background-color: black;
 		}
@@ -99,42 +111,43 @@
 			border-radius: 50px;
 			
 		}
-		.lang-plus {
-  width: 15%;
-  height: 25px; /* Înălțimea inițială */
-  background-color: rgba(11, 107, 0, 1.00);
-  margin-right: 20px;
-  transform: skew(-45deg); /* Rotirea paralelogramului */
-	border-color: black;
-			border: solid 1.5px;
-  /* Media query pentru ecrane de dimensiuni mici */
-  @media screen and (max-width: 768px) {
-    height: 20px; /* Reducem înălțimea pentru ecrane mai mici */
-	  margin-right:10px;
-  }
-			@media screen and (max-width: 500px) {
-    height: 15px; /* Reducem înălțimea pentru ecrane mai mici */
-	  margin-right:6px;
-  }
+		.lang-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
-		.lang-min {
-  width: 15%;
-  height: 25px; /* Înălțimea inițială */
-  background-color: rgba(255,255,255,1.00);
-  margin-right: 20px;
-  transform: skew(-45deg); /* Rotirea paralelogramului */
-border-color: black;
-			border: solid 1.5px;
-  /* Media query pentru ecrane de dimensiuni mici */
-  @media screen and (max-width: 768px) {
-    height: 20px; /* Reducem înălțimea pentru ecrane mai mici */
-	  margin-right:10px;
-  }
-			@media screen and (max-width: 500px) {
-    height: 15px; /* Reducem înălțimea pentru ecrane mai mici */
-	  margin-right:6px;
-  }
+
+.lang-label {
+  width: 100px;
+  font-size: 20px;
+  font-family: "Lora", serif;
+  margin-right: 10px;
 }
+
+.lang-bar {
+ 
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0; /* Culoare fundal */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.lang-bar-fill {
+	
+  height: 100%;
+  background: linear-gradient(45deg, #00b345, #64cf00); /* Gradient verde */
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out; /* Animație */
+}
+.lang-level {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px; /* Spațiu între text și bară */
+  color: #0b6b00; /* Culoare verde pentru nivel */
+}
+
 		
 			
 		.skills-img{
@@ -271,7 +284,12 @@ var numereDeIncarcat = {
 	adobe: 40,
 	figma:28
 };
-
+var language = {
+	romanian: 100,
+	russian: 85,
+	french: 27,
+	english: 50
+};
 // Funcția care actualizează bara de progres pentru fiecare limbaj
 function incarcaAnimatie() {
     Object.keys(numereDeIncarcat).forEach(function(limbaj) {
@@ -344,10 +362,11 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
                 "sidebar mainA mainA"
                 "sidebar mainB mainB";
         }
-
+	
         span.template-sidebar--left > :nth-child(1) {
             grid-area: sidebar;
         }
+
 
         span.template-sidebar--right {
             grid-template: 
@@ -380,6 +399,7 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			height: 40px;
 			color:white;
 			border: none;
+			border-radius: 5px;
 			box-shadow: 0 0 15px rgba(0,0,0,0.50);
 			transition: box-shadow 0.75s ease-in-out;
 			
@@ -491,40 +511,43 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 		
 		</div>
 		<div class="for-lang">
-		<img src="https://media.mihailungu.com/resources/icon/lang.png" width="34px" height="34px"> <div><h2>&nbsp;Language:</h2></div>
-		</div>
-		
-		<div class="for-skills">
-		
-			
-			<h3>Romanian</h3>
-			
-			
-			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div> </div></div>
-			
-			
-		</div>
-
-		<div class="for-skills">
-		
-			<h3>Russian</h3>
-			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-min"></div> </div></div>
-			
-			
+			<img src="https://media.mihailungu.com/resources/icon/lang.png" width="34px" height="34px">
+			<div><h2>&nbsp;Language:</h2></div>
+		  </div>
+		  
+		  <div class="lang-container">
+			<div class="lang-label">Romanian</div>
+			<div class="lang-level">C2&nbsp;&nbsp;</div>
+			<div class="lang-bar">
+			  <div class="lang-bar-fill" style="width: 100%;" id="romanian"></div>
 			</div>
-		
-		<div class="for-skills">
-		
-			<h3>French</h3>
-			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-min"></div><div class="lang-min"></div><div class="lang-min"></div><div class="lang-min"></div> </div></div>
+		  </div>
+		  
+		  <div class="lang-container">
+			<div class="lang-label">Russian</div>
+			<div class="lang-level">C1&nbsp;&nbsp;</div>
+			<div class="lang-bar">
+			  <div class="lang-bar-fill" style="width: 85%;" id="russian"></div>
 			</div>
-		
-		
-		<div class="for-skills">
-		
-			<h3>English</h3>
-			<div class="lang-tot"><div class="for-skills"><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-plus"></div><div class="lang-min"></div><div class="lang-min"></div><div class="lang-min"></div> </div></div>
-		</div>
+		  </div>
+		  
+		  <div class="lang-container">
+			<div class="lang-label">French</div>
+			<div class="lang-level">A2&nbsp;&nbsp;</div>
+			<div class="lang-bar">
+			  <div class="lang-bar-fill" style="width: 27%;" id="french"></div>
+			</div>
+		  </div>
+		  
+		  <div class="lang-container">
+			<div class="lang-label">English</div>
+			<div class="lang-level">B1&nbsp;&nbsp;</div>
+			<div class="lang-bar">
+			  <div class="lang-bar-fill" style="width: 50%;" id="english"></div>
+			</div>
+		  </div>
+		  
+		  
 		<br>
 	</div>
 		<div class="education" id="education">
@@ -618,45 +641,101 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 		<div class="total"><div class="figma"></div></div>
 	</div><br>
 		</div>
-		
-		<div class="awards" id="awards">
+			<div class="awards" id="awards">
 			<div class="for-awards">
 		<img src="https://media.mihailungu.com/resources/icon/award.png" width="30px" height="43px">
 			<h2>Awards:</h2>
-				
 		</div>
-			<span class="template-sidebar--right t" id="dynamicHeight">
-				<img class="land" src="https://www.mihailungu.com/achievements/small/certificat-ms.png" onClick="window.open('https://www.freecodecamp.org/certification/fccabfff8b0-72e3-40f4-a634-e2651b9b113d/foundational-c-sharp-with-microsoft')">		
-		<img class="land" src="https://www.mihailungu.com/achievements/small/certificat9.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat9.jpg')">
-        <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-5.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-5.jpg')">
-		<img class="land" src="https://www.mihailungu.com/achievements/small/certificat7.png" onClick="window.open('https://www.mihailungu.com/achievements/certificat7.png')">		
-		<img class="land" src="https://www.mihailungu.com/achievements/small/certificat6.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat6.jpg')">
-        
-    </span>
-	<br>
-	
-    <span class="template-sidebar--left t" id="dynamicHeight">
-		<img class="land" src="https://www.mihailungu.com/achievements/small/diploma-3.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-3.jpg')">
-		<img class="land" src="https://www.mihailungu.com/achievements/small/certificat8.png" onClick="window.open('https://www.mihailungu.com/achievements/certificat8.png')">
-        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat5.png" onClick="window.open('https://www.mihailungu.com/achievements/certificat5.png')">
-        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat4.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat4.jpg')">
-		<img class="land" src="https://www.mihailungu.com/achievements/small/diploma-4.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-4.jpg')">
-    </span>
-	<br>
-	
+			<h3 class="date">[ 03/12/2024 ] Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău</h3>
+			<h3 class="info-awards">Third Degree Diploma is awarded to student Lungu Mihai for exceptional results evaluated during the Student of the Year 2024 <br>
+			Link: <a href="https://www.mihailungu.com/achievements/diploma_locul3.png" target="_blank">Diploma</a> </h3>
 
-	 <span class="template-sidebar--right t" id="dynamicHeight">
-		<img class="land" src="https://www.mihailungu.com/achievements/small/certificat3.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat3.png')">
-        <img class="land" src="https://www.mihailungu.com/achievements/small/certificat2.jpg" onClick="window.open('https://www.mihailungu.com/cv/pages/conf-07-04-23')">
-        <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-2.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-2.jpg')">
-		 <img class="land" src="https://www.mihailungu.com/achievements/small/diploma-1.jpg" onClick="window.open('https://www.mihailungu.com/achievements/diploma-1.jpg')">
-		 <img class="land" src="https://www.mihailungu.com/achievements/small/certificat.jpg" onClick="window.open('https://www.mihailungu.com/achievements/certificat.jpg')">
-    </span>
+			<h3 class="date">[ 13/10/2024 ] Molvova State University</h3>
+			<h3 class="info-awards">Certificate of participation in the International Conference dedicated to the 60th ANNIVERSARY of the foundation of
+			Vladimir Andrunachievici Institute of Mathematics and Computer Science<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat_conf.png" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 13/05/2024 ] Nova Academy</h3>
+			<h3 class="info-awards">Certificate confirming the successful completion with excellence of all tasks in the 4-day intensive "UX/UI Marathon"
+			organized by Nova Academy.<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat7.png" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 28/04/2024 ] Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău</h3>
+			<h3 class="info-awards">A volunteer certificate is awarded to FMTI faculty student Lungu Mihai in recognition of constructive activity and
+			valuable involvement in promoting the spirit of volunteerism at the "FII PRO" 2024 event.<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat9.jpg" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 18/04/2024 ] Universitatea ”Alexandru Ioan Cuza” din Iași</h3>
+			<h3 class="info-awards">Certificate has participated in the seventh edition of Spring School, scheduled between 15th and 18th of April 2024, 
+			housed within the Faculty of Computer Science, "Alexandru Ioan Cuza" University of Iași
+			Organized in collaboration with the Technological Transfer Centre iTransfer. This event provided a unique opportunity for
+			participants to enhance their understanding and expertise in topics like Cloud/Edge Computing, Network Communication
+			Architectures, Visualization Technologies, 5G Networks and Security in Distributed System<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat6.jpg" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 12/04/2024 ] Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău</h3>
+			<h3 class="info-awards">Certificate for participation in the National Scientific Conference "Issues and Solutions in Contemporary Science", 
+			with the presentation "Applications of Genetic Algorithms in Determining the Maximum of a Single-variable Function".<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat8.png" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 12/04/2024 ] Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău</h3>
+			<h3 class="info-awards">Diploma of 2nd Place for the presentation "Applications of Genetic Algorithms in Determining the Maximum of a Singlevariable Function"<br>
+			Link: <a href="https://www.mihailungu.com/achievements/diploma-5.jpg" target="_blank">Diploma</a></h3>
+
+			<h3 class="date">[ 19/11/2023 ] Clasa Viitorului</h3>
+			<h3 class="info-awards">Volunteer Certificate for involvement and support in the preparations for the FIRST LEGO League Explore and Challenge 
+			MasterPiece Moldova 2024 competition, within the National Innovation Center in Education "Clasa Viitorului"<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat5.png" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 12/11/2023 ] Clasa Viitorului - DigiEduHack</h3>
+			<h3 class="info-awards">Diploma of 2nd Place for considerable ingenuity and effective strategy in addressing complex educational challenges 
+			in the "Innovations in Education: Transforming the educational process through technology and creativity"<br>
+			Link: <a href="https://www.mihailungu.com/achievements/diploma-4.jpg" target="_blank">Diploma</a></h3>
+
+			<h3 class="date">[ 28/10/2023 ] Universitatea Pedagogică de Stat ”Ion Creangă” din Chișinău</h3>
+			<h3 class="info-awards">Certificate for participation in the international scientific conference "INTER/TRANSDISCIPLINARY APPROACHES IN TEACHING NATURAL SCIENCES (STEAM CONCEPT)"<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat4.jpg" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 22/10/2023 ] Startup Moldova</h3>
+			<h3 class="info-awards">Certificate for active involvement and valuable contribution as a participant in STARTUP WEEKEND<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat3.png" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 05/2023 ] Universitatea Pedagogică de Stat ”Ion Creangă” din Chișinău</h3>
+			<h3 class="info-awards">1st place at the interuniversity computer science olympiad<br>
+			Link: <a href="https://www.mihailungu.com/achievements/diploma-3.jpg" target="_blank">Diploma</a></h3>
+
+			<h3 class="date">[ 07/04/2023 ] Universitatea Pedagogică de Stat ”Ion Creangă” din Chișinău</h3>
+			<h3 class="info-awards">Certificate for participation in the national scientific conference of students with international participation "Problems and solutions in contemporary science" UPSC<br>
+			Link: <a href="https://www.mihailungu.com/cv/pages/conf-07-04-23" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 05/2022] Solidarity FabLab Soroca</h3>
+			<h3 class="info-awards">Certificate for participation in the Solidarity FabLab Soroca digital manufacturing workshops<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat.jpg" target="_blank">Certificate</a></h3>
+
+			<h3 class="date">[ 05/2021 ] Universitatea Pedagogică de Stat ”Ion Creangă” din Chișinău</h3>
+			<h3 class="info-awards">1st place at the online computer science olympiad<br>
+			Link: <a href="https://www.mihailungu.com/achievements/diploma-1.jpg" target="_blank">Diploma</a></h3>
+
+			<h3 class="date">[ 02/2020 ] Liceul Teoretic ”Petru Rareș”</h3>
+			<h3 class="info-awards">Mention at the District Informatics Olympiad<br>
+			Link: <a href="https://www.mihailungu.com/achievements/diploma-2.jpg" target="_blank">Diploma</a></h3>
+
+			
 			</div>
 		
 		<div class="portfolio" id="portfolio">
 		<h2 title="Portofolio pentru programe Portofolio pentru programe Portofolio pentru programe Portofolio pentru programePortofolio pentru programe Portofolio pentru programe Portofolio pentru programe">Portfolio</h2>
-				<h3>Here are my works in C# with the .NET framework.</h3>
+				<h3>Here are my works in C#.</h3>
+				<center>
+			<div class="row">
+			<div class="col-md-6">
+				<button class="button" onClick="vig_mod()"><span>Viginere Cipher</span></button> 
+				</div>
+				<div class="col-md-6">
+				<button class="button" onClick="crack_mod()"><span>Crack Viginere</span></button>
+				</div>
+				</div>
+				</center>
 			<center><div class="row">
 			<div class="col-md-6">
 				<button class="button" onClick="mp3_mod()"><span>Mp3 Player</span></button>
@@ -718,13 +797,37 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 				
 			</div>
 			</center>
+		
 			
-			
-			
-			
+			<div id="vig" class="modal" onclick="closevig(event)">
+				<div class="modal-content">
+					<div>
+						<h1 align="center">Viginere Cipher</h1>
+						<center>
+							<div class="mp_1">
+								<img src="portfolio/viginere-cipher.png" class="mp">
+							</div>
+						</center>
+						<h3>The Vigenère Cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It uses a keyword, where each letter of the keyword shifts the corresponding letter of the plaintext by a number of positions in the alphabet.</h3>
+					</div>
+				</div>
+			</div>
+			<div id="crack" class="modal" onclick="closecrack(event)">
+				<div class="modal-content">
+					<div>
+						<h1 align="center">Crack Viginere Cipher</h1>
+						<center>
+							<div class="mp_1">
+								<img src="portfolio/crack-viginere-cipher.png" class="mp">
+							</div>
+						</center>
+						<h3>This application is designed to decrypt messages encoded with the Vigenère cipher. It uses frequency analysis and other cryptographic techniques to determine the most likely key and decrypt the message.</h3>
+					</div>
+				</div>
+			</div>
 			<div id="mp3" class="modal" onclick="closemp3(event)">
-        <div class="modal-content">
-            <div>
+		<div class="modal-content">
+			<div>
                 
 				<h1 align="center">Mp3 Player</h1>
 				<center><div class="mp_1">
@@ -910,6 +1013,22 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 	
 	<script>
 	
+	function vig_mod(){
+			document.getElementById("vig").style.display = "block";
+		}
+		function closevig(event) {
+            if (event.target === document.getElementById("vig")) {
+                document.getElementById("vig").style.display = "none";
+            }
+        }
+		function crack_mod(){
+			document.getElementById("crack").style.display = "block";
+		}
+		function closecrack(event) {
+            if (event.target === document.getElementById("crack")) {
+                document.getElementById("crack").style.display = "none";
+            }
+        }
 		function mp3_mod(){
 			document.getElementById("mp3").style.display = "block";
 		}
