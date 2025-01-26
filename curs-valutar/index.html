@@ -299,8 +299,8 @@
                     <img src="${currency.icon}" alt="${currency.code} flag">
                     ${currency.code}: ${currency.value.toFixed(4)} MDL&nbsp;&nbsp;&nbsp;
                     <div class="change">
-                        ${currency.change >= 0 ? '▲' : '▼'}
-                        <span class="${currency.change >= 0 ? 'up' : 'down'}">${currency.change.toFixed(4)}</span>
+                        
+                        <span class="${currency.change >= 0 ? 'up' : 'down'}">${currency.change >= 0 ? '▲' : '▼'}${currency.change.toFixed(4)}</span>
                     </div>
                 `;
                 ratesContainer.appendChild(rateDiv);
