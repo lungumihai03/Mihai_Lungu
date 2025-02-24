@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<games>
+    <game>
+        <title>Payday 2</title>
+        <link>https://www.paydaythegame.com/payday2/</link>
+        <image>https://cdn-ext.fanatical.com/production/product/original/9f765b68-118f-432f-a282-c3e1cd1f976c.jpeg?w=1200</image>
+    </game>
+    <game>
+        <title>MudRunner</title>
+        <link>https://www.focus-entmt.com/en/games/mudrunner-american-wilds-edition</link>
+        <image>https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fmudrunner%2Fhome%2FMudRunner_EpicGames_LandscapeImage_2560x1440-2560x1440-5358739def54045e1fcb5f38033764c0fcc05632.jpg</image>
+    </game>
+    <game>
+        <title>World of Tanks Blitz</title>
+        <link>https://eu.wotblitz.com/en</link>
+        <image>https://www.teahub.io/photos/full/113-1134475_world-of-tanks-blitz-steam.jpg</image>
+    </game>
+    <game>
+        <title>Singularity</title>
+        <link>https://store.steampowered.com/app/42670/Singularity/</link>
+        <image>https://assets.altarofgaming.com/wp-content/uploads/2022/02/singularity-cover-altar-of-gaming.jpg</image>
+    </game>
+</games>
+<?xml>
