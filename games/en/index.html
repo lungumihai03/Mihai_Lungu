@@ -279,46 +279,41 @@ background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%);
 	
 	<br>
 	
-	<div class="drep">
-  <div class="row text-center">
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-1 pb-md-0">
-      <br>
-      <div class="card">
-        <a href="https://www.brawlhalla.com/" target="_blank">
-          <img class="card-img-top responsive-image games" src="https://galootsloot.com/wp-content/uploads/2017/08/brawlhalla_20170801203337.jpg" title="Brawlhalla" style="width: auto; height: auto">
-        </a>
-      </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-1 pb-md-0">
-      <br>
-      <div class="card">
-        <a href="https://www.ea.com/games/command-and-conquer" target="_blank">
-          <img class="card-img-top responsive-image games" src="https://i.ytimg.com/vi/Cw5tpBqu014/maxresdefault.jpg" title="Command and Conquer Project Raptor" style="width: auto; height: auto">
-        </a>
-      </div>
-    </div>
+	<div class="drep"></div>
 
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-1 pb-md-0">
-      <br>
-      <div class="card">
-        <a href="https://minecraft.com/" target="_blank">
-          <img class="card-img-top responsive-image games" src="https://news.xbox.com/en-us/wp-content/uploads/sites/2/2021/10/Minecraft_PC_Bundle_XboxClub_1920x1080.png" title="Minecraft" style="width: auto; height: auto">
-        </a>
-      </div>
-    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://www.mihailungu.com/games/games.xml")
+            .then(response => response.text())
+            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+            .then(data => {
+                const games = data.getElementsByTagName("game");
+                let output = '<div class="row text-center">';
+                
+                for (let i = 0; i < games.length; i++) {
+                    let title = games[i].getElementsByTagName("title")[0].textContent;
+                    let link = games[i].getElementsByTagName("link")[0].textContent;
+                    let image = games[i].getElementsByTagName("image")[0].textContent;
+                    
+                    output += `
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-1 pb-md-0">
+                            <br>
+                            <div class="card">
+                                <a href="${link}" target="_blank">
+                                    <img class="card-img-top responsive-image games" src="${image}" title="${title}" style="width: auto; height: auto">
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                output += '</div><br>';
+                document.querySelector(".drep").innerHTML = output;
+            })
+            .catch(error => console.log("Eroare la încărcarea XML: ", error));
+    });
+</script>
 
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12 pb-1 pb-md-0">
-      <br>
-      <div class="card">
-        <a href="https://www.kineticgames.co.uk/phasmophobia" target="_blank">
-          <img class="card-img-top responsive-image games" src="https://rusgameah.com/wp-content/uploads/2021/08/Phasmophobia.jpg" title="Phasmophobia" style="width: auto; height: auto">
-        </a>
-      </div>
-    </div>
-  </div>
-  <br>
-</div>
 
 	
 	
