@@ -273,16 +273,16 @@
 		// Definim un obiect cu numărul la care vrem să ajungem pentru fiecare limbaj
 var numereDeIncarcat = {
     html: 64,
-    css: 42,
-    js: 53,
-	php: 20,
+    css: 50,
+    js: 40,
+	php: 24,
     cpp: 58,
-    csharp: 73,
-    sql: 24,
-    python: 32,
-	office: 47,
-	adobe: 40,
-	figma:28
+    csharp: 75,
+    sql: 22,
+    python: 17,
+	office: 57,
+	adobe: 60,
+	figma:25
 };
 var language = {
 	romanian: 100,
@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			
 }
 		.button:hover{
-			transition: background-color: 0.75s ease-in-out;
+			transition: background-color 0.75s ease-in-out;
 			background-color: #006712;
 			box-shadow: 0 0 20px rgba(0,0,0,0.70);
 			
@@ -447,6 +447,22 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 
 
     </style>
+	<style>
+		.git{
+			width: 240px;
+			height: 55px;
+			background-color: #c0c0c0;
+			color: black;
+			border: 1 px solid black;
+			border-radius: 5px;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			cursor: pointer;
+		
+		}
+	</style>
 </head>
 
 <body>
@@ -470,7 +486,7 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			<a class="nav-bar-color-text" href="#about">About</a>
 			</li>
 			<li>
-			<a class="nav-bar-color-text" href="#education">Education</a>
+			<a class="nav-bar-color-text" href="#education">Education and training</a>
 			</li>
 			<li>
 			<a class="nav-bar-color-text" href="#skills">Skills</a>
@@ -501,9 +517,7 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 				<h3 class="info">Date of birth: 22/11/2003</h3>
 				<h3 class="info">Nationality: Moldovan</h3>
 				<h3 class="info">Gender: Male</h3>
-				<h3 class="info">Phone: <a href="tel:+37369902230">+37369902230</a></h3>
-				<h3 class="info">Email address: <a href="mailto:lungu.mihai03@gmail.com">lungu.mihai03@gmail.com</a></h3>
-				<h3 class="info">Email address: <a href="mailto:lungu.mihai03@mihailungu.com">lungu.mihai@mihailungu.com</a></h3>
+				
 				<img onClick="window.open('https://www.linkedin.com/in/lungu-mihai03/')" src="https://media.mihailungu.com/resources/skills/linkedin.png" class="skills-img tooltip-img" style="cursor:pointer;" title="Linkedin">&nbsp;&nbsp;
 				<img onClick="window.open('https://github.com/lungumihai03')" src="https://media.mihailungu.com/resources/skills/github.png" class="skills-img" style="cursor:pointer;" title="Github">&nbsp;&nbsp;
 				<img onClick="window.open('https://orcid.org/0009-0002-4636-2085')" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" class="skills-img" style="cursor:pointer;" title="Orcid">
@@ -552,7 +566,7 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 	</div>
 		<div class="education" id="education">
 			
-			<h2><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size:24px;"></i>&nbsp;Education:</h2>
+			<h2><i class="fa fa-graduation-cap" aria-hidden="true" style="font-size:24px;"></i>&nbsp;Education and training:</h2>
 			
 			
 			<h3>01/09/2009 – 31/05/2022 Soroca, Moldova<br>
@@ -563,7 +577,11 @@ Address Dimitrie Cantemir, MD-3005, Soroca, Moldova Website <a href="http://ltcs
 				<b>THE DIGITAL MANUFACTURING WORKSHOP</b> Solidarity FabLab Soroca<br>
 				<hr class="max">
 Address str. Mihai Kogalniceanu 9, MD-3005, Soroca, Moldova</h3>
-			<h3>01/09/2022 – CURRENT Chișinău, Moldova<br>
+<h3>15/04/2024 – 18/04/2024 Iași, România<br>
+				<b>SEVENTH EDITION OF SPRING SCHOOL</b> Universitatea ”Alexandru Ioan Cuza” din Iași<br>
+				<hr class="max">
+Address General Henri Mathias Berthelot 16, Iași 700702, Romania Website <a href="https://www.uaic.ro/">www.uaic.ro</a></h3>
+			<h3>01/09/2022 – 08/07/2025 Chișinău, Moldova<br>
 				<b>UNDERGRADUATE STUDIES, FMTI, COMPUTER SCIENCE</b> Universitatea Pedagogică de Stat ”Ion
 Creangă” din Chișinău<br>
 				<hr class="max">
@@ -813,6 +831,9 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 							</div>
 						</center>
 						<h3>The Vigenère Cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It uses a keyword, where each letter of the keyword shifts the corresponding letter of the plaintext by a number of positions in the alphabet.</h3>
+					<div class="git" nclick="window.open('https://github.com/lungumihai03/Vigenere-cipher-and-crack', '_blank')">
+						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -826,6 +847,9 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 							</div>
 						</center>
 						<h3>This application is designed to decrypt messages encoded with the Vigenère cipher. It uses frequency analysis and other cryptographic techniques to determine the most likely key and decrypt the message.</h3>
+					<div class="git" nclick="window.open('https://github.com/lungumihai03/Vigenere-cipher-and-crack', '_blank')">
+						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -884,7 +908,9 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 				</div>
 				</center>
 				<h3>This application is a genetic calculator. It allows the user to input a function and the interval over which they want to calculate it. The application will then compute the value of the function for each value in the interval.</h3>
-				
+				<div class="git" nclick="window.open('https://github.com/lungumihai03/algoritmi-genetici', '_blank')">
+						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+					</div>
             </div>
             
         </div>
@@ -899,7 +925,9 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 				</div>
 				</center>
 				<h3>This is a complex human resources application that allows comprehensive management of employee information, including registration, documents, leaves, and career progression. The application automatically calculates salaries and generates payslips, while also enabling advanced data analysis.</h3>
-				
+				<div class="git" nclick="window.open('https://github.com/lungumihai03/Gestionarea_HR', '_blank')">
+						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+					</div>
             </div>
             
         </div>
@@ -929,7 +957,9 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 				</div>
 				</center>
 				<h3>This is a text editing application. You can use it to create and edit text files.</h3>
-				
+				<div class="git" nclick="window.open('https://github.com/lungumihai03/notepad', '_blank')">
+						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+					</div>
             </div>
             
         </div>
