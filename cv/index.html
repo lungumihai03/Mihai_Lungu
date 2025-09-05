@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 	<style>
 
 
@@ -268,6 +269,141 @@
 		
 	</style>
 	
+<!--  Style for portfolio  -->
+<style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-header {
+            padding: 25px;
+            background: linear-gradient(135deg, #1e7e34, #28a745);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-header::before {
+            right: -30%;
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .project-subtitle {
+            opacity: 0.8;
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-description {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #d4edda, #e8f5e8);
+            color: #155724;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: 500;
+            border: 1px solid rgba(30, 126, 52, 0.2);
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #1e7e34;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #1e7e34;
+            border-radius: 50%;
+        }
+
+        .project-link {
+            background: linear-gradient(135deg, #1e7e34, #28a745);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 126, 52, 0.4);
+        }
+
+       
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+<!-- End of style for portfolio  -->
+
 <script>
 	
 		// Definim un obiect cu numărul la care vrem să ajungem pentru fiecare limbaj
@@ -412,55 +548,26 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 		}
 	
 	</style>
-<style>
-        /* Stilurile pentru fereastra modală */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto;
-            padding: 20px;
-            width: 50%;
-        }
-
-        /* Stiluri pentru imagine */
-        #modal-image {
-            width: 50%;
-            float: right;
-            margin-right: 10px;
-        }
-
-        /* Stiluri suplimentare */
-        .center {
-            text-align: center;
-        }
-
-
-    </style>
 	<style>
 		.git{
-			width: 240px;
-			height: 55px;
-			background-color: #c0c0c0;
-			color: black;
+			width: 320px;
+			height: 40px;
+			background-color: #000000;
+			color: rgb(255, 255, 255);
 			border: 1 px solid black;
 			border-radius: 5px;
 			align-items: center;
 			display: flex;
-			justify-content: center;
+			
 
 			cursor: pointer;
 		
+		}
+		.git:hover{
+			background-color: #000000;
+			transition: background-color 0.75s ease-in-out;
+			box-shadow: 0 0 15px rgba(0,0,0,0.50);
 		}
 	</style>
 </head>
@@ -513,7 +620,7 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			<h2>Mihai Lungu</h2>
 			</div>
 			<div class="col-md-6 info">
-				<h1 class="info">Hello, i am backend developer in .NET</h1>
+				<h1 class="info">Hello, i am developer in .NET C#</h1>
 				<h3 class="info">Date of birth: 22/11/2003</h3>
 				<h3 class="info">Nationality: Moldovan</h3>
 				<h3 class="info">Gender: Male</h3>
@@ -586,7 +693,11 @@ Address General Henri Mathias Berthelot 16, Iași 700702, Romania Website <a hre
 Creangă” din Chișinău<br>
 				<hr class="max">
 Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="https://www.upsc.md">www.upsc.md</a></h3>
-		
+		<h3>01/09/2025 – Present Chișinău, Moldova<br>
+				<b>MASTER`S STUDIES, FMTI, INFORMATION TECHNOLOGIES IN EDUCATION</b> Universitatea Pedagogică de Stat ”Ion
+Creangă” din Chișinău<br>
+				<hr class="max">
+Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="https://www.upsc.md">www.upsc.md</a></h3>
 		</div>
 	<div class="skills" id="skills">
 		
@@ -748,420 +859,317 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 		<div class="portfolio" id="portfolio">
 		<h2 title="Portofolio pentru programe Portofolio pentru programe Portofolio pentru programe Portofolio pentru programePortofolio pentru programe Portofolio pentru programe Portofolio pentru programe">Portfolio</h2>
 				<h3>Here are my works in C#.</h3>
-				<center>
-			<div class="row">
-			<div class="col-md-6">
-				<button class="button" onClick="vig_mod()"><span>Viginere Cipher</span></button> 
-				</div>
-				<div class="col-md-6">
-				<button class="button" onClick="crack_mod()"><span>Crack Viginere</span></button>
-				</div>
-				</div>
-				</center>
-			<center><div class="row">
-			<div class="col-md-6">
-				<button class="button" onClick="mp3_mod()"><span>Mp3 Player</span></button>
-				</div>
-				<div class="col-md-6">
-				<button class="button" onClick="calc_mod()"><span>Calculator</span></button>
-				</div>
-				
-			</div>
-			</center>
-			<center><div class="row">
-			<div class="col-md-6">
-				<button class="button" onClick="about_mod()"><span>About PC</span></button>
-				</div>
-				<div class="col-md-6">
-				<button class="button" onClick="gen_mod()"><span>Genetic Algorithms</span></button>
-				</div>
-				
-			</div>
-			</center>
-			<center><div class="row">
-			<div class="col-md-6">
-				<button class="button" onClick="hr_mod()"><span>HR app</span></button>
-				</div>
-				<div class="col-md-6">
-				<button class="button" onClick="tr_mod()"><span>Technical Review</span></button>
-				</div>
-				
-			</div>
-			</center>
-			<center><div class="row">
-			<div class="col-md-6">
-				<button class="button" onClick="note_mod()"><span>Notepad</span></button>
-				</div>
-				<div class="col-md-6">
-				<button class="button" onClick="tts_mod()"><span>Text to Speech</span></button>
-				</div>
-				
-			</div>
-			</center>
-			<h3>Here are my projects in web frontend.</h3>
-			<center><div class="row">
-			<div class="col-md-6">
-				<button class="button" onClick="mihai_mod()"><span>Personal Site</span></button>
-				</div>
-				<div class="col-md-6">
-				<button class="button" onClick="tpa_mod()"><span>TPA</span></button>
-				</div>
-				
-			</div>
-			</center>
-			<center><div class="row">
-			<div class="col-md-6">
-				<button class="button" onClick="dev_mod()"><span>Dev Platform</span></button>
-				</div>
-				<div class="col-md-6">
-				<button class="button" onClick="fmti_mod()"><span>FMTI Site</span></button>
-				</div>
-				
-			</div>
-			</center>
-		
-			
-			<div id="vig" class="modal" onclick="closevig(event)">
-				<div class="modal-content">
-					<div>
-						<h1 align="center">Viginere Cipher</h1>
-						<center>
-							<div class="mp_1">
-								<img src="portfolio/viginere-cipher.png" class="mp">
-							</div>
-						</center>
-						<h3>The Vigenère Cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It uses a keyword, where each letter of the keyword shifts the corresponding letter of the plaintext by a number of positions in the alphabet.</h3>
-					<div class="git" onclick="window.open('https://github.com/lungumihai03/Vigenere-cipher-and-crack', '_blank')">
-						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+				<br>
+			<div class="projects-grid" id="projectsGrid">
+			<div class="project-card" data-category="cryptography">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-lock"></i>
 					</div>
+					<h3 class="project-title">Vigenère Cipher and Crack</h3>
+					<p class="project-subtitle">Polyalphabetic Cipher</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Complete tool for Vigenère cipher encryption, decryption, and automated key-cracking using frequency analysis.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">Cryptography</span>
+						<span class="tag">Frequency Analysis</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Vigenere-cipher-and-crack', '_blank')">View Project</h4>
 					</div>
 				</div>
 			</div>
-			<div id="crack" class="modal" onclick="closecrack(event)">
-				<div class="modal-content">
-					<div>
-						<h1 align="center">Crack Viginere Cipher</h1>
-						<center>
-							<div class="mp_1">
-								<img src="portfolio/crack-viginere-cipher.png" class="mp">
-							</div>
-						</center>
-						<h3>This application is designed to decrypt messages encoded with the Vigenère cipher. It uses frequency analysis and other cryptographic techniques to determine the most likely key and decrypt the message.</h3>
-					<div class="git" onclick="window.open('https://github.com/lungumihai03/Vigenere-cipher-and-crack', '_blank')">
-						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+
+			<div class="project-card" data-category="utilities">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-desktop"></i>
 					</div>
+					<h3 class="project-title">About PC</h3>
+					<p class="project-subtitle">System Information</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Comprehensive system information viewer displaying detailed hardware and OS specifications using WMI.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">WMI</span>
+						<span class="tag">System Info</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/About-Pc', '_blank')">View Project</h4>
 					</div>
 				</div>
 			</div>
-			<div id="mp3" class="modal" onclick="closemp3(event)">
-		<div class="modal-content">
-			<div>
-                
-				<h1 align="center">Mp3 Player</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/mp3-player.png" class="mp">
-				</div>
-				</center>
-				<h3>A simple music player application with basic playback and playlist management functions.</h3>
-				
-            </div>
-            
-        </div>
-    </div>
-			<div id="calc" class="modal" onclick="closecalc(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">Calculator</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/calc.png" class="mp">
-				</div>
-				</center>
-				<h3>The calculator is a simple application that allows users to perform basic mathematical calculations.</h3>
-				
-            </div>
-            
-        </div>
-    </div>
-			<div id="aboutpc" class="modal" onclick="closeabout(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">About PC</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/about.png" class="mp">
-				</div>
-				</center>
-				<h3>This application shows you information about your computer, such as the processor, RAM, graphics card, storage space, operating system, and motherboard.</h3>
-				
-            </div>
-            
-        </div>
-    </div>
-			<div id="gen" class="modal" onclick="closegen(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">Genetic Algorithms</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/gen.png" class="mp">
-				</div>
-				</center>
-				<h3>This application is a genetic calculator. It allows the user to input a function and the interval over which they want to calculate it. The application will then compute the value of the function for each value in the interval.</h3>
-				<div class="git" onclick="window.open('https://github.com/lungumihai03/algoritmi-genetici', '_blank')">
-						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+
+			<div class="project-card" data-category="algorithms">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-dna"></i>
 					</div>
-            </div>
-            
-        </div>
-    </div>
-			<div id="hr" class="modal" onclick="closehr(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">HR App</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/res.png" class="mp">
+					<h3 class="project-title">Genetic Algorithms</h3>
+					<p class="project-subtitle">AI & Optimization</p>
 				</div>
-				</center>
-				<h3>This is a complex human resources application that allows comprehensive management of employee information, including registration, documents, leaves, and career progression. The application automatically calculates salaries and generates payslips, while also enabling advanced data analysis.</h3>
-				<div class="git" onclick="window.open('https://github.com/lungumihai03/Gestionarea_HR', '_blank')">
-						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+				<div class="project-body">
+					<p class="project-description">
+						Tool demonstrating genetic algorithms through polynomial function evaluation with fitness metrics and binary representation.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">AI</span>
+						<span class="tag">Optimization</span>
 					</div>
-            </div>
-            
-        </div>
-    </div>
-			<div id="tr" class="modal" onclick="closetr(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">Technical Review</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/tr.png" class="mp">
-				</div>
-				</center>
-				<h3>This is a car management application. It allows the user to add, view, renew inspections, and delete cars from the database. The application also has an "About" section, which provides information about the application and the developer.</h3>
-				
-            </div>
-            
-        </div>
-    </div>
-			<div id="note" class="modal" onclick="closenote(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">Notepad</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/note.png" class="mp">
-				</div>
-				</center>
-				<h3>This is a text editing application. You can use it to create and edit text files.</h3>
-				<div class="git" onclick="window.open('https://github.com/lungumihai03/notepad', '_blank')">
-						<h3>View on <img src="https://media.mihailungu.com/resources/skills/github.png" width="25px" height="25px"> GitHub</h3>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/algoritmi-genetici', '_blank')">View Project</h4>
 					</div>
-            </div>
-            
-        </div>
-    </div>
-			<div id="tts" class="modal" onclick="closetts(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">Text to Speech</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/tts.png" class="mp">
 				</div>
-				</center>
-				<h3>This is a text-to-speech application. You can use it to convert text into speech.</h3>
-				
-            </div>
-            
-        </div>
-    </div>
-			<div id="mihai" class="modal" onclick="closemihai(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">Personal Site</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/site.png" class="mp">
+			</div>
+
+			<div class="project-card" data-category="business">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-users"></i>
+					</div>
+					<h3 class="project-title">HR Management System</h3>
+					<p class="project-subtitle">Human Resources & Payroll</p>
 				</div>
-				</center>
-				<h3>This is my personal website created out of interest in programming. <a href="https://www.mihailungu.com" target="_blank">Go to website...</a></h3>
-				
-            </div>
-            
-        </div>
-    </div>
-		
-			<div id="tpa" class="modal" onclick="closetpa(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">TPA Site</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/tpa.png" class="mp">
+				<div class="project-body">
+					<p class="project-description">
+						Comprehensive HR system with employee management, payroll calculations, leave tracking, and role-based access control.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinUI3</span>
+						<span class="tag">MySQL</span>
+						<span class="tag">Excel Integration</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Gestionarea_HR', '_blank')">View Project</h4>
+					</div>
 				</div>
-				</center>
-				<h3>This is the website for posting homework assignments for web programming subjects. <a href="https://tpa.mihailungu.com" target="_blank">Go to website...</a></h3>
-				
-            </div>
-            
-        </div>
-    </div>	
-			<div id="dev" class="modal" onclick="closedev(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">DEV Platform</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/dev.png" class="mp">
+			</div>
+
+			<div class="project-card" data-category="desktop">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-edit"></i>
+					</div>
+					<h3 class="project-title">Notepad</h3>
+					<p class="project-subtitle">Text Editor</p>
 				</div>
-				</center>
-				<h3>This is a website for programming in various languages. <a href="https://dev.mihailungu.com" target="_blank">Go to website...</a></h3>
-				
-            </div>
-            
-        </div>
-    </div>
-			<div id="fmti" class="modal" onclick="closefmti(event)">
-        <div class="modal-content">
-            <div>
-                
-				<h1 align="center">FMTI Site</h1>
-				<center><div class="mp_1">
-				<img src="portfolio/fmti.png" class="mp">
+				<div class="project-body">
+					<p class="project-description">
+						Advanced text editor with enhanced functionality for document creation and editing with modern UI.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">Text Editor</span>
+						<span class="tag">UI</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/notepad', '_blank')">View Project</h4>
+					</div>
 				</div>
-				</center>
-				<h3>This is the website of the faculty created by me, containing various information for students. <a href="https://fmti.mihailungu.com" target="_blank">Go to website...</a></h3>
-				
-            </div>
-            
-        </div>
-    </div>
-			
-			
+			</div>
+
+			<div class="project-card" data-category="cryptography">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-key"></i>
+					</div>
+					<h3 class="project-title">Affine Cipher</h3>
+					<p class="project-subtitle">Monoalphabetic Substitution</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Implementation of the Affine cipher with customizable keys and alphabet support for encryption and decryption.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">Cryptography</span>
+						<span class="tag">Mathematics</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/cript_afin', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card" data-category="cryptography">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-shield-alt"></i>
+					</div>
+					<h3 class="project-title">Hill Cipher</h3>
+					<p class="project-subtitle">Matrix-Based Encryption</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Polygraphic substitution cipher using 3x3 matrices with detailed step-by-step logging and modular arithmetic.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">Linear Algebra</span>
+						<span class="tag">Matrix Operations</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/CriptareHill', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card" data-category="cryptography">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-search"></i>
+					</div>
+					<h3 class="project-title">Cryptanalysis Tool</h3>
+					<p class="project-subtitle">Cipher Breaking</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Advanced tool for cryptographic analysis featuring frequency analysis, text manipulation, and cipher breaking capabilities.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">Frequency Analysis</span>
+						<span class="tag">Statistics</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Criptoanaliza', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card" data-category="cryptography">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-chess-board"></i>
+					</div>
+					<h3 class="project-title">Playfair Cipher</h3>
+					<p class="project-subtitle">Digraph Substitution</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Implementation of the Playfair cipher using 5x5 matrices with automatic text preparation and real-time encryption.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">Matrix Cipher</span>
+						<span class="tag">Text Processing</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Playfair-Cipher', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card" data-category="business">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-car"></i>
+					</div>
+					<h3 class="project-title">Vehicle Registration System</h3>
+					<p class="project-subtitle">Database Management</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Complete vehicle registration management system with SQLite database integration and CRUD operations.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">SQLite</span>
+						<span class="tag">Database</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Depozit-Auto', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+			<div class="project-card" data-category="desktop">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="project-title">TODO App</h3>
+                    <p class="project-subtitle">Task Management</p>
+                </div>
+                <div class="project-body">
+                    <p class="project-description">
+                        Feature-rich task management application with priority levels, due dates, and JSON data persistence.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">WinForms</span>
+                        <span class="tag">JSON</span>
+                        <span class="tag">Task Management</span>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-status">
+                            <div class="status-dot"></div>
+                            Completed
+                        </div>
+                        <h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Simple-Todo-List', '_blank')">View Project</h4>
+                    </div>
+                </div>
+            </div>			
 		</div>
 	</div>
 	
-	<script>
 	
-	function vig_mod(){
-			document.getElementById("vig").style.display = "block";
-		}
-		function closevig(event) {
-            if (event.target === document.getElementById("vig")) {
-                document.getElementById("vig").style.display = "none";
-            }
-        }
-		function crack_mod(){
-			document.getElementById("crack").style.display = "block";
-		}
-		function closecrack(event) {
-            if (event.target === document.getElementById("crack")) {
-                document.getElementById("crack").style.display = "none";
-            }
-        }
-		function mp3_mod(){
-			document.getElementById("mp3").style.display = "block";
-		}
-		function closemp3(event) {
-            if (event.target === document.getElementById("mp3")) {
-                document.getElementById("mp3").style.display = "none";
-            }
-        }
-		function calc_mod(){
-			document.getElementById("calc").style.display = "block";
-		}
-		function closecalc(event) {
-            if (event.target === document.getElementById("calc")) {
-                document.getElementById("calc").style.display = "none";
-            }
-        }
-		function about_mod(){
-			document.getElementById("aboutpc").style.display = "block";
-		}
-		function closeabout(event) {
-            if (event.target === document.getElementById("aboutpc")) {
-                document.getElementById("aboutpc").style.display = "none";
-            }
-        }
-		function gen_mod(){
-			document.getElementById("gen").style.display = "block";
-		}
-		function closegen(event) {
-            if (event.target === document.getElementById("gen")) {
-                document.getElementById("gen").style.display = "none";
-            }
-        }
-		function hr_mod(){
-			document.getElementById("hr").style.display = "block";
-		}
-		function closehr(event) {
-            if (event.target === document.getElementById("hr")) {
-                document.getElementById("hr").style.display = "none";
-            }
-        }
-		function tr_mod(){
-			document.getElementById("tr").style.display = "block";
-		}
-		function closetr(event) {
-            if (event.target === document.getElementById("tr")) {
-                document.getElementById("tr").style.display = "none";
-            }
-        }
-		function note_mod(){
-			document.getElementById("note").style.display = "block";
-		}
-		function closenote(event) {
-            if (event.target === document.getElementById("note")) {
-                document.getElementById("note").style.display = "none";
-            }
-        }
-		function tts_mod(){
-			document.getElementById("tts").style.display = "block";
-		}
-		function closetts(event) {
-            if (event.target === document.getElementById("tts")) {
-                document.getElementById("tts").style.display = "none";
-            }
-        }
-		function mihai_mod(){
-			document.getElementById("mihai").style.display = "block";
-		}
-		function closemihai(event) {
-            if (event.target === document.getElementById("mihai")) {
-                document.getElementById("mihai").style.display = "none";
-            }
-        }
-		function tpa_mod(){
-			document.getElementById("tpa").style.display = "block";
-		}
-		function closetpa(event) {
-            if (event.target === document.getElementById("tpa")) {
-                document.getElementById("tpa").style.display = "none";
-            }
-        }
-		function dev_mod(){
-			document.getElementById("dev").style.display = "block";
-		}
-		function closedev(event) {
-            if (event.target === document.getElementById("dev")) {
-                document.getElementById("dev").style.display = "none";
-            }
-        }
-		function fmti_mod(){
-			document.getElementById("fmti").style.display = "block";
-		}
-		function closefmti(event) {
-            if (event.target === document.getElementById("fmti")) {
-                document.getElementById("fmti").style.display = "none";
-            }
-        }
-		
-		
-		
-	</script>
 </body>
 </html>
