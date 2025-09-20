@@ -15,6 +15,10 @@
 	<style>
 
 
+@keyframes blink {
+	0%, 50% { border-color: transparent; }
+	51%, 100% { border-color: #000; }
+}
 
 		body {
             font-family: 'Lora', serif;
@@ -201,6 +205,17 @@
 		}
 		
 		.awards{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+			
+		}
+		.certifications{
 			width: auto;
 			height: auto;
 			background-color:rgba(255,255,255,0.83);
@@ -408,17 +423,17 @@
 	
 		// Definim un obiect cu numărul la care vrem să ajungem pentru fiecare limbaj
 var numereDeIncarcat = {
-    html: 64,
-    css: 50,
-    js: 40,
+    html: 60,
+    css: 45,
+    js: 32,
 	php: 24,
-    cpp: 58,
-    csharp: 75,
-    sql: 22,
-    python: 17,
+    cpp: 49,
+    csharp: 70,
+    sql: 18,
+    python: 12,
 	office: 57,
 	adobe: 60,
-	figma:25
+	figma:21
 };
 var language = {
 	romanian: 100,
@@ -599,6 +614,9 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			<a class="nav-bar-color-text" href="#skills">Skills</a>
 			</li>
 			<li>
+			<a class="nav-bar-color-text" href="#certifications">Certifications</a>
+			</li>
+			<li>
 			<a class="nav-bar-color-text" href="#awards">Awards</a>
 			</li>
 			<li>
@@ -620,7 +638,26 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			<h2>Mihai Lungu</h2>
 			</div>
 			<div class="col-md-6 info">
-				<h1 class="info">Hello, i am developer in .NET C#</h1>
+				<h1 id="typed-text" class="info"></h1>
+	
+<script>
+const text = "Hello, i am developer in .NET C#";
+const element = document.getElementById('typed-text');
+let index = 0;
+
+function typeWriter() {
+	if (index < text.length) {
+		element.innerHTML += text.charAt(index);
+		index++;
+		setTimeout(typeWriter, 100); // Adjust speed here
+	} else {
+		element.classList.remove('typing');
+	}
+}
+
+element.classList.add('typing');
+typeWriter();
+</script>
 				<h3 class="info">Date of birth: 22/11/2003</h3>
 				<h3 class="info">Nationality: Moldovan</h3>
 				<h3 class="info">Gender: Male</h3>
@@ -770,6 +807,18 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 		<div class="total"><div class="figma"></div></div>
 	</div><br>
 		</div>
+		<div class="certifications" id="certifications">
+			
+			<h2><i class="fas fa-medal" aria-hidden="true" style="font-size:30px;"></i>&nbsp;Certifications:</h2>
+		
+			<h3 class="date">[ 26/08/2024 ] Freecode Camp - Microsoft</h3>
+			<h3 class="info-awards">The certificate confirms that Mihai Lungu has successfully completed the "Foundational C# with Microsoft Developer Certification" course on August 26.<br>
+			Link: <a href="https://www.freecodecamp.org/certification/lungu_mihai03/foundational-c-sharp-with-microsoft" target="_blank">Certificate</a></h3>
+			<h3 class="date">[ 13/05/2024 ] Nova Academy</h3>
+			<h3 class="info-awards">Certificate confirming the successful completion with excellence of all tasks in the 4-day intensive "UX/UI Marathon"
+			organized by Nova Academy.<br>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat7.png" target="_blank">Certificate</a></h3>
+			</div>
 			<div class="awards" id="awards">
 			<div class="for-awards">
 		<img src="https://media.mihailungu.com/resources/icon/award.png" width="30px" height="43px">
@@ -783,15 +832,6 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 			<h3 class="info-awards">Certificate of participation in the International Conference dedicated to the 60th ANNIVERSARY of the foundation of
 			Vladimir Andrunachievici Institute of Mathematics and Computer Science<br>
 			Link: <a href="https://www.mihailungu.com/achievements/certificat_conf.png" target="_blank">Certificate</a></h3>
-
-			<h3 class="date">[26/08/2024] Freecode Camp - Microsoft</h3>
-			<h3 class="info-awards">The certificate confirms that Mihai Lungu has successfully completed the "Foundational C# with Microsoft Developer Certification" course on August 26.<br>
-			Link: <a href="https://www.freecodecamp.org/certification/lungu_mihai03/foundational-c-sharp-with-microsoft" target="_blank">Certificate</a></h3>
-			
-			<h3 class="date">[ 13/05/2024 ] Nova Academy</h3>
-			<h3 class="info-awards">Certificate confirming the successful completion with excellence of all tasks in the 4-day intensive "UX/UI Marathon"
-			organized by Nova Academy.<br>
-			Link: <a href="https://www.mihailungu.com/achievements/certificat7.png" target="_blank">Certificate</a></h3>
 
 			<h3 class="date">[ 28/04/2024 ] Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău</h3>
 			<h3 class="info-awards">A volunteer certificate is awarded to FMTI faculty student Lungu Mihai in recognition of constructive activity and
@@ -857,90 +897,34 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 			</div>
 		
 		<div class="portfolio" id="portfolio">
-		<h2 title="Portofolio pentru programe Portofolio pentru programe Portofolio pentru programe Portofolio pentru programePortofolio pentru programe Portofolio pentru programe Portofolio pentru programe">Portfolio</h2>
-				<h3>Here are my works in C#.</h3>
-				<br>
-			<div class="projects-grid" id="projectsGrid">
-			<div class="project-card" data-category="cryptography">
+		<h2 title="Portofolio pentru programe"><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;Portfolio</h2>
+		<h3>Here are my works in C#.</h3>
+		<br>
+		<div class="projects-grid" id="projectsGrid">
+			<div class="project-card" data-category="desktop">
 				<div class="project-header">
 					<div class="project-icon">
-						<i class="fas fa-lock"></i>
+						<i class="fas fa-tasks"></i>
 					</div>
-					<h3 class="project-title">Vigenère Cipher and Crack</h3>
-					<p class="project-subtitle">Polyalphabetic Cipher</p>
+					<h3 class="project-title">TODO App</h3>
+					<p class="project-subtitle">Task Management</p>
 				</div>
 				<div class="project-body">
 					<p class="project-description">
-						Complete tool for Vigenère cipher encryption, decryption, and automated key-cracking using frequency analysis.
+						Feature-rich task management application with priority levels, due dates, and JSON data persistence.
 					</p>
 					<div class="project-tags">
 						<span class="tag">C#</span>
 						<span class="tag">WinForms</span>
-						<span class="tag">Cryptography</span>
-						<span class="tag">Frequency Analysis</span>
+						<span class="tag">JSON</span>
+						<span class="tag">Task Management</span>
 					</div>
 					<div class="project-footer">
 						<div class="project-status">
 							<div class="status-dot"></div>
 							Completed
 						</div>
-						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Vigenere-cipher-and-crack', '_blank')">View Project</h4>
-					</div>
-				</div>
-			</div>
-
-			<div class="project-card" data-category="utilities">
-				<div class="project-header">
-					<div class="project-icon">
-						<i class="fas fa-desktop"></i>
-					</div>
-					<h3 class="project-title">About PC</h3>
-					<p class="project-subtitle">System Information</p>
-				</div>
-				<div class="project-body">
-					<p class="project-description">
-						Comprehensive system information viewer displaying detailed hardware and OS specifications using WMI.
-					</p>
-					<div class="project-tags">
-						<span class="tag">C#</span>
-						<span class="tag">WinForms</span>
-						<span class="tag">WMI</span>
-						<span class="tag">System Info</span>
-					</div>
-					<div class="project-footer">
-						<div class="project-status">
-							<div class="status-dot"></div>
-							Completed
-						</div>
-						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/About-Pc', '_blank')">View Project</h4>
-					</div>
-				</div>
-			</div>
-
-			<div class="project-card" data-category="algorithms">
-				<div class="project-header">
-					<div class="project-icon">
-						<i class="fas fa-dna"></i>
-					</div>
-					<h3 class="project-title">Genetic Algorithms</h3>
-					<p class="project-subtitle">AI & Optimization</p>
-				</div>
-				<div class="project-body">
-					<p class="project-description">
-						Tool demonstrating genetic algorithms through polynomial function evaluation with fitness metrics and binary representation.
-					</p>
-					<div class="project-tags">
-						<span class="tag">C#</span>
-						<span class="tag">WinForms</span>
-						<span class="tag">AI</span>
-						<span class="tag">Optimization</span>
-					</div>
-					<div class="project-footer">
-						<div class="project-status">
-							<div class="status-dot"></div>
-							Completed
-						</div>
-						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/algoritmi-genetici', '_blank')">View Project</h4>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Simple-Todo-List', '_blank')">View Project</h4>
 					</div>
 				</div>
 			</div>
@@ -973,30 +957,30 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 				</div>
 			</div>
 
-			<div class="project-card" data-category="desktop">
+			<div class="project-card" data-category="cryptography">
 				<div class="project-header">
 					<div class="project-icon">
-						<i class="fas fa-edit"></i>
+						<i class="fas fa-lock"></i>
 					</div>
-					<h3 class="project-title">Notepad</h3>
-					<p class="project-subtitle">Text Editor</p>
+					<h3 class="project-title">Vigenère Cipher and Crack</h3>
+					<p class="project-subtitle">Polyalphabetic Cipher</p>
 				</div>
 				<div class="project-body">
 					<p class="project-description">
-						Advanced text editor with enhanced functionality for document creation and editing with modern UI.
+						Complete tool for Vigenère cipher encryption, decryption, and automated key-cracking using frequency analysis.
 					</p>
 					<div class="project-tags">
 						<span class="tag">C#</span>
 						<span class="tag">WinForms</span>
-						<span class="tag">Text Editor</span>
-						<span class="tag">UI</span>
+						<span class="tag">Cryptography</span>
+						<span class="tag">Frequency Analysis</span>
 					</div>
 					<div class="project-footer">
 						<div class="project-status">
 							<div class="status-dot"></div>
 							Completed
 						</div>
-						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/notepad', '_blank')">View Project</h4>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Vigenere-cipher-and-crack', '_blank')">View Project</h4>
 					</div>
 				</div>
 			</div>
@@ -1004,27 +988,27 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 			<div class="project-card" data-category="cryptography">
 				<div class="project-header">
 					<div class="project-icon">
-						<i class="fas fa-key"></i>
+						<i class="fas fa-chess-board"></i>
 					</div>
-					<h3 class="project-title">Affine Cipher</h3>
-					<p class="project-subtitle">Monoalphabetic Substitution</p>
+					<h3 class="project-title">Playfair Cipher</h3>
+					<p class="project-subtitle">Digraph Substitution</p>
 				</div>
 				<div class="project-body">
 					<p class="project-description">
-						Implementation of the Affine cipher with customizable keys and alphabet support for encryption and decryption.
+						Implementation of the Playfair cipher using 5x5 matrices with automatic text preparation and real-time encryption.
 					</p>
 					<div class="project-tags">
 						<span class="tag">C#</span>
 						<span class="tag">WinForms</span>
-						<span class="tag">Cryptography</span>
-						<span class="tag">Mathematics</span>
+						<span class="tag">Matrix Cipher</span>
+						<span class="tag">Text Processing</span>
 					</div>
 					<div class="project-footer">
 						<div class="project-status">
 							<div class="status-dot"></div>
 							Completed
 						</div>
-						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/cript_afin', '_blank')">View Project</h4>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Playfair-Cipher', '_blank')">View Project</h4>
 					</div>
 				</div>
 			</div>
@@ -1088,27 +1072,111 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 			<div class="project-card" data-category="cryptography">
 				<div class="project-header">
 					<div class="project-icon">
-						<i class="fas fa-chess-board"></i>
+						<i class="fas fa-key"></i>
 					</div>
-					<h3 class="project-title">Playfair Cipher</h3>
-					<p class="project-subtitle">Digraph Substitution</p>
+					<h3 class="project-title">Affine Cipher</h3>
+					<p class="project-subtitle">Monoalphabetic Substitution</p>
 				</div>
 				<div class="project-body">
 					<p class="project-description">
-						Implementation of the Playfair cipher using 5x5 matrices with automatic text preparation and real-time encryption.
+						Implementation of the Affine cipher with customizable keys and alphabet support for encryption and decryption.
 					</p>
 					<div class="project-tags">
 						<span class="tag">C#</span>
 						<span class="tag">WinForms</span>
-						<span class="tag">Matrix Cipher</span>
-						<span class="tag">Text Processing</span>
+						<span class="tag">Cryptography</span>
+						<span class="tag">Mathematics</span>
 					</div>
 					<div class="project-footer">
 						<div class="project-status">
 							<div class="status-dot"></div>
 							Completed
 						</div>
-						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Playfair-Cipher', '_blank')">View Project</h4>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/cript_afin', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card" data-category="algorithms">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-dna"></i>
+					</div>
+					<h3 class="project-title">Genetic Algorithms</h3>
+					<p class="project-subtitle">AI & Optimization</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Tool demonstrating genetic algorithms through polynomial function evaluation with fitness metrics and binary representation.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">AI</span>
+						<span class="tag">Optimization</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/algoritmi-genetici', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card" data-category="utilities">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-desktop"></i>
+					</div>
+					<h3 class="project-title">About PC</h3>
+					<p class="project-subtitle">System Information</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Comprehensive system information viewer displaying detailed hardware and OS specifications using WMI.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">WMI</span>
+						<span class="tag">System Info</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/About-Pc', '_blank')">View Project</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-card" data-category="desktop">
+				<div class="project-header">
+					<div class="project-icon">
+						<i class="fas fa-edit"></i>
+					</div>
+					<h3 class="project-title">Notepad</h3>
+					<p class="project-subtitle">Text Editor</p>
+				</div>
+				<div class="project-body">
+					<p class="project-description">
+						Advanced text editor with enhanced functionality for document creation and editing with modern UI.
+					</p>
+					<div class="project-tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinForms</span>
+						<span class="tag">Text Editor</span>
+						<span class="tag">UI</span>
+					</div>
+					<div class="project-footer">
+						<div class="project-status">
+							<div class="status-dot"></div>
+							Completed
+						</div>
+						<h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/notepad', '_blank')">View Project</h4>
 					</div>
 				</div>
 			</div>
@@ -1140,33 +1208,6 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 					</div>
 				</div>
 			</div>
-			<div class="project-card" data-category="desktop">
-                <div class="project-header">
-                    <div class="project-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3 class="project-title">TODO App</h3>
-                    <p class="project-subtitle">Task Management</p>
-                </div>
-                <div class="project-body">
-                    <p class="project-description">
-                        Feature-rich task management application with priority levels, due dates, and JSON data persistence.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">C#</span>
-                        <span class="tag">WinForms</span>
-                        <span class="tag">JSON</span>
-                        <span class="tag">Task Management</span>
-                    </div>
-                    <div class="project-footer">
-                        <div class="project-status">
-                            <div class="status-dot"></div>
-                            Completed
-                        </div>
-                        <h4 class="project-link" onclick="window.open('https://github.com/lungumihai03/Simple-Todo-List', '_blank')">View Project</h4>
-                    </div>
-                </div>
-            </div>			
 		</div>
 	</div>
 	
