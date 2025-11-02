@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <games>
     <game>
-        <title>World of Tanks</title>
-        <link>https://worldoftanks.com/</link>
-        <image>https://wallsdesk.com/wp-content/uploads/2016/11/World-of-Tanks-Computer-Wallpaper.jpg</image>
+        <title>Detroit: Become Human</title>
+        <link>https://www.quanticdream.com/en/detroit-become-human</link>
+        <image>https://cdn2.unrealengine.com/Diesel/product/columbine/home/EGS_Social_Detroit_Become_Human_1920x1080-1920x1080-411f2df60bab61ed958488df85174de26b6cf3bc.jpg</image>
     </game>
     <game>
-        <title>Metro Exodus</title>
-        <link>https://www.metrothegame.com/en-us/</link>
-        <image>https://i0.wp.com/www.techjunkie.com/wp-content/uploads/2018/12/metroexodus.jpg</image>
+        <title>Tom Clancy's Ghost Recon: Wildlands</title>
+        <link>https://store.ubisoft.com/us/tom-clancys-ghost-recon-wildlands---ultimate-edition/5b969c88ca1a64033f76fa29.html?lang=default</link>
+        <image>https://gamecraves.com/wp-content/uploads/2023/02/Tom-Clancys-Ghost-Recon-Wildlands-Header.jpg</image>
     </game>
     <game>
-        <title>Sniper Ghost Warrior 2</title>
-        <link>https://store.steampowered.com/app/34870/Sniper_Ghost_Warrior_2/</link>
-        <image>https://wallpapercave.com/wp/wp8715114.jpg</image>
+        <title>Revolution Idle</title>
+        <link>https://store.steampowered.com/app/2763740/Revolution_Idle/</link>
+        <image>https://m.exophase.com/steam/games/o/40841b3.png?30726c10e642a268d1f4b982a1874337</image>
     </game>
     <game>
-        <title>Rocket League</title>
-        <link>https://www.rocketleague.com/en</link>
-        <image>https://cdn1.epicgames.com/item/9773aa1aa54f4f7b80e44bef04986cea/eEGS_RocketLeague_PsyonixLLC_S1_2560x1440-2c4734fceda0a1b6df485271f7f7b748</image>
+        <title>Euro Truck Simulator 2</title>
+        <link>https://eurotrucksimulator2.com/</link>
+        <image>https://cdn-ext.fanatical.com/production/product/original/d4a0921c-4978-446c-aac0-dbd594e933e3.jpg?w=1200</image>
     </game>
 </games>
 <?xml>
