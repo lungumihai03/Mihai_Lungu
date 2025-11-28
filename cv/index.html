@@ -282,7 +282,16 @@
 		html {
     scroll-behavior: smooth;
 }
-		
+		.work-experience{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+		}
 	</style>
 	
 <!--  Style for portfolio  -->
@@ -416,6 +425,51 @@
         .hidden {
             display: none;
         }
+#toTopBtn {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(145deg, #0aff7a, #00c95a);
+  color: #063;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 12px #00ff88,
+              0 0 25px #00ff88 inset;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 9999;
+
+  /* mic efect 3D când treci cu mouse-ul */
+  transform: scale(0.9);
+}
+
+#toTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+#toTopBtn:hover {
+  background: linear-gradient(145deg, #51ffb0, #1fe077);
+  box-shadow: 0 0 18px #00ff9d,
+              0 0 35px #00ff9d inset;
+  transform: scale(1.1);
+}
+
+
+
+
     </style>
 
 <!-- End of style for portfolio  -->
@@ -589,6 +643,26 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 </head>
 
 <body>
+	<button id="toTopBtn">▲</button>
+
+<script>
+  const toTopBtn = document.getElementById("toTopBtn");
+
+  // Afișăm butonul doar când utilizatorul derulează
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      toTopBtn.classList.add("show");
+    } else {
+      toTopBtn.classList.remove("show");
+    }
+  });
+
+  // Derulare lină la începutul paginii
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
 	<nav class="navbar navbar-btn">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -607,6 +681,9 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
         <ul class="nav navbar-nav navbar-right">
           <li>
 			<a class="nav-bar-color-text" href="#about">About</a>
+			</li>
+			<li>
+			<a class="nav-bar-color-text" href="#work-experience">Work Experience</a>
 			</li>
 			<li>
 			<a class="nav-bar-color-text" href="#education">Education and training</a>
@@ -708,6 +785,43 @@ typeWriter();
 		  
 		  
 		<br>
+	</div>
+	<div class="work-experience" id="work-experience">
+		
+			<h2><i class="fa fa-briefcase" aria-hidden="true" style="font-size:24px;"></i>&nbsp;Work Experience:</h2>
+			
+			
+			<h3>
+				01/10/2025 – Present Chișinău, Moldova
+				<span id="monthsWorked" style="font-size:16px; color:#555; margin-left:10px;"></span>
+			</h3>
+			
+			<h3>
+			<b>Information Analyst Assistant</b> - Vladimir Andrunachievici Institute of Mathematics and Computer Science<br>
+			</h3>
+			<hr class="max">
+
+			<script>
+				(function() {
+					const startYear = 2025;
+					const startMonth = 10; // Octombrie (1-12)
+
+					function calcMonthsDiff(startY, startM) {
+						const now = new Date();
+						const y = now.getFullYear();
+						const m = now.getMonth() + 1; // 1-12
+
+						return (y - startY) * 12 + (m - startM);
+					}
+
+					const span = document.getElementById("monthsWorked");
+					if (span) {
+						const months = calcMonthsDiff(startYear, startMonth);
+						span.textContent = `(${months} month${months !== 1 ? 's' : ''} of experience)`;
+					}
+				})();
+			</script>
+
 	</div>
 		<div class="education" id="education">
 			
@@ -825,6 +939,17 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 		<img src="https://media.mihailungu.com/resources/icon/award.png" width="30px" height="43px">
 			<h2>Awards:</h2>
 		</div>
+			<h3 class="date">[ 08-09/11/2025 ] Clasa Viitorului - DigiEduHack</h3>
+			<h3 class="info-awards">Diploma of 1st place for pioneering solution and visionary approch, setting a remarkable standart for peers during 
+				"Learning Experience Reimagined: AI-Powered Self-Reflection and Peer-Connected Growth"<br>
+			Link: <a href="https://www.mihailungu.com/achievements/digieduhack_2025.jpg" target="_blank">Diploma</a> </h3>
+
+			<h3 class="date">[ 31/10-01/11/2025 ] Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău</h3>
+			<h3 class="info-awards">Certificate of participation, This is to formally certify that LUNGU Mihai has presented the papaer entitled 
+				"Algoritm criptografic cu aplicarea izotopilor de grupoizi latini" at the 5th International Scientific Conforence 
+				"INTER/TRANSDISCIPLINARY APPROACHES IN TEACHING REAL SCIENCES (STEAM concept)" <br>
+			Link: <a href="https://www.mihailungu.com/achievements/TIC_STEAM25_page-0016.jpg" target="_blank">Certificate</a> </h3>
+
 			<h3 class="date">[ 03/12/2024 ] Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău</h3>
 			<h3 class="info-awards">Third Degree Diploma is awarded to student Lungu Mihai for exceptional results evaluated during the Student of the Year 2024 <br>
 			Link: <a href="https://www.mihailungu.com/achievements/diploma_locul3.png" target="_blank">Diploma</a> </h3>
@@ -861,7 +986,7 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 			MasterPiece Moldova 2024 competition, within the National Innovation Center in Education "Clasa Viitorului"<br>
 			Link: <a href="https://www.mihailungu.com/achievements/certificat5.png" target="_blank">Certificate</a></h3>
 
-			<h3 class="date">[ 12/11/2023 ] Clasa Viitorului - DigiEduHack</h3>
+			<h3 class="date">[ 11-12/11/2023 ] Clasa Viitorului - DigiEduHack</h3>
 			<h3 class="info-awards">Diploma of 2nd Place for considerable ingenuity and effective strategy in addressing complex educational challenges 
 			in the "Innovations in Education: Transforming the educational process through technology and creativity"<br>
 			Link: <a href="https://www.mihailungu.com/achievements/diploma-4.jpg" target="_blank">Diploma</a></h3>
