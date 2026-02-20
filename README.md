@@ -14,4 +14,4 @@ Dive into the realm of games. Whether it's video games, tabletop adventures, or 
 Embark on a literary journey through my reading habits. Find book recommendations, reviews, and insights into the captivating world of literature. 📖✨
 
 ### License 📃
-This project is not licensed explicitly. All rights are reserved by Mihai Lungu © 2025.
+This project is not licensed explicitly. All rights are reserved by Mihai Lungu © 2026.
