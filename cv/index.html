@@ -478,17 +478,17 @@
 	
 		// Definim un obiect cu numărul la care vrem să ajungem pentru fiecare limbaj
 var numereDeIncarcat = {
-    html: 60,
+    html: 65,
     css: 45,
-    js: 32,
-	php: 24,
-    cpp: 49,
+    js: 28,
+	php: 35,
+    cpp: 39,
     csharp: 70,
-    sql: 18,
-    python: 12,
-	office: 57,
-	adobe: 60,
-	figma:21
+    sql: 25,
+    python: 10,
+	office: 67,
+	adobe: 70,
+	figma:15
 };
 var language = {
 	romanian: 100,
@@ -639,6 +639,17 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			transition: background-color 0.75s ease-in-out;
 			box-shadow: 0 0 15px rgba(0,0,0,0.50);
 		}
+
+		.articles{
+			width: auto;
+			height: auto;
+			background-color:rgba(255,255,255,0.83);
+			padding: 10px;
+			margin: 10px;
+			border-radius: 20px;
+			border: 1px solid green;
+			box-shadow: 0 0 5px rgba(0,0,0,0.50);
+		}
 	</style>
 </head>
 
@@ -694,6 +705,9 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			<li>
 			<a class="nav-bar-color-text" href="#certifications">Certifications</a>
 			</li>
+			<li>		
+			<a class="nav-bar-color-text" href="#articles">Articles</a>
+			</li>
 			<li>
 			<a class="nav-bar-color-text" href="#awards">Awards</a>
 			</li>
@@ -715,11 +729,11 @@ document.addEventListener('DOMContentLoaded', incarcaAnimatie);
 			<img src="https://media.mihailungu.com/resources/images/m.png" class="photo">
 			<h2>Mihai Lungu</h2>
 			</div>
-			<div class="col-md-6 info">
-				<h1 id="typed-text" class="info"></h1>
+			<div class="col-md-8 info">
+				<h3 id="typed-text" class="info"></h3>
 	
 <script>
-const text = "Hello, i am developer in .NET C#";
+const text = "Hello, my name is Mihai Lungu and I am an Information Analyst Assistant at Vladimir Andrunachievici Institute of Mathematics and Computer Science. I am passionate about technology, programming, and continuous learning. With a strong background in computer science and a keen interest in data analysis, I strive to contribute to innovative projects and make a positive impact in the field of information technology.";
 const element = document.getElementById('typed-text');
 let index = 0;
 
@@ -727,7 +741,7 @@ function typeWriter() {
 	if (index < text.length) {
 		element.innerHTML += text.charAt(index);
 		index++;
-		setTimeout(typeWriter, 100); // Adjust speed here
+		setTimeout(typeWriter, 35); // Adjust speed here
 	} else {
 		element.classList.remove('typing');
 	}
@@ -934,6 +948,22 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 			organized by Nova Academy.<br>
 			Link: <a href="https://www.mihailungu.com/achievements/certificat7.png" target="_blank">Certificate</a></h3>
 			</div>
+
+			<div class="articles" id="articles">
+			<h2><i class="fas fa-newspaper" aria-hidden="true" style="font-size:30px;"></i>&nbsp;Articles:</h2>
+			<h3 class="date">[ 01/11/2025 ] - Algoritm criptografic cu aplicarea izotopilor de grupoizi latini </h3>
+			<h3 class="info-awards">The paper "Algoritm criptografic cu aplicarea izotopilor de grupoizi latini" was published in the proceedings of the 5th International Scientific Conference "INTER/TRANSDISCIPLINARY APPROACHES IN TEACHING REAL SCIENCES (STEAM concept)" organized by Universitatea Pedagogica de Stat ”Ion Creanga” din Chișinău.<br>
+			Link: <a href="https://www.mihailungu.com/cv/pages/conf-01-11-25/" target="_blank">Article</a></h3>
+			<hr class="max">
+			<h3 class="date">[ 10/04/2025 ] - Dezvoltarea și implementarea unui modul software pentru gestionarea activităților în domeniul resurselor umane și al contabilității </h3>
+			<h3 class="info-awards">The paper presents the development of a desktop application for human resources and payroll management in SMEs, implemented in WinUI 3 and C#, with features for employee and leave administration, automatic salary calculation, generation of payroll statements in Excel, and reports, using MySQL for efficient data storage.<br>
+			Link: <a href="https://www.mihailungu.com/cv/pages/conf-10-04-25/" target="_blank">Article</a></h3>
+			<hr class="max">
+			<h3 class="date">[ 07/04/2023 ] -  Valorificarea competențelor de programare la elaborarea unei aplicații de gestionare a tablourilor de structuri</h3>
+			<h3 class="info-awards">The paper presents a methodology for leveraging the programming skills of first-year students, first cycle, Computer Science major, when studying structures in the C programming language. To achieve individual work, students with high programming performance are motivated to use the visual programming platforms, which facilitates learning structured data types such as structures (records, items) and files. The used methodology is exemplified when developing the application for managing a car warehouse.<br>
+			Link: <a href="https://www.mihailungu.com/cv/pages/conf-07-04-23/" target="_blank">Article</a></h3>
+			</div>
+
 			<div class="awards" id="awards">
 			<div class="for-awards">
 		<img src="https://media.mihailungu.com/resources/icon/award.png" width="30px" height="43px">
@@ -1005,7 +1035,7 @@ Address Strada Ion Creangă 1, MD-2064, Chișinău, Moldova Website <a href="htt
 
 			<h3 class="date">[ 07/04/2023 ] Universitatea Pedagogică de Stat ”Ion Creangă” din Chișinău</h3>
 			<h3 class="info-awards">Certificate for participation in the national scientific conference of students with international participation "Problems and solutions in contemporary science" UPSC<br>
-			Link: <a href="https://www.mihailungu.com/cv/pages/conf-07-04-23" target="_blank">Certificate</a></h3>
+			Link: <a href="https://www.mihailungu.com/achievements/certificat2.jpg" target="_blank">Certificate</a></h3>
 
 			<h3 class="date">[ 05/2022] Solidarity FabLab Soroca</h3>
 			<h3 class="info-awards">Certificate for participation in the Solidarity FabLab Soroca digital manufacturing workshops<br>
