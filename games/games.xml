@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <games>
     <game>
-        <title>Atomic Heart</title>
-        <link>https://atomic.mundfish.com/en.html</link>
-        <image>https://cdn.wccftech.com/wp-content/uploads/2023/01/atomic-heart-scaled.jpg</image>
+        <title>Point Blank</title>
+        <link>https://ru.4game.ru/pointblank</link>
+        <image>https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fru-mds.4game.com%2Fimages%2Fpatchnoteimages%2Foriginal%2F019f1c79-dbb6-73ce-8b03-fd7405772704.i4g&f=1&nofb=1&ipt=3379100be238e210ecc5577baceab8caa5bd7ed43f2823cfbe9b743beab8e28f</image>
     </game>
+
     <game>
         <title>Stray</title>
         <link>https://annapurnainteractive.com/games/stray</link>
         <image>https://img.gg.deals/65/ad/0a2ee26421e9b2df4d202d23b138ec2cb69b_1232xr706_Q100.jpg</image>
     </game>
+
     <game>
         <title>Pragmata</title>
         <link>https://www.capcom-games.com/pragmata/en-us/</link>
         <image>https://cdn.wccftech.com/wp-content/uploads/2025/06/PRAGMATA_Keyart_1st_Horizontal_4K_RGB-1456x819.jpg</image>
     </game>
+
     <game>
         <title>Euro Truck Simulator 2</title>
         <link>https://eurotrucksimulator2.com/</link>
         <image>https://cdn-ext.fanatical.com/production/product/original/d4a0921c-4978-446c-aac0-dbd594e933e3.jpg?w=1200</image>
     </game>
 </games>
-<?xml>
