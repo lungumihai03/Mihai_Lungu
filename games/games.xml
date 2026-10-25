@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <games>
     <game>
-        <title>Point Blank</title>
-        <link>https://ru.4game.ru/pointblank</link>
-        <image>https://ru-mds.4game.com/images/patchnoteimages/original/019f1c79-dbb6-73ce-8b03-fd7405772704.i4g</image>
+        <title>Grand Theft Auto V Enhanced</title>
+        <link>https://www.rockstargames.com/gta-v</link>
+        <image>https://gta.pl/wp-content/uploads/2025/03/Grand-Theft-Aauto-V-Enhanced-1240x580.jpg</image>
     </game>
 
     <game>
-        <title>Stray</title>
-        <link>https://annapurnainteractive.com/games/stray</link>
-        <image>https://img.gg.deals/65/ad/0a2ee26421e9b2df4d202d23b138ec2cb69b_1232xr706_Q100.jpg</image>
+        <title>The Elder Scrolls V Skyrim Special Edition</title>
+        <link>https://elderscrolls.bethesda.net/en-US/skyrim10</link>
+        <image>https://cdn.mobygames.com/covers/10977945-the-elder-scrolls-v-skyrim-special-edition-windows-front-cover.jpg</image>
     </game>
 
     <game>
-        <title>Pragmata</title>
-        <link>https://www.capcom-games.com/pragmata/en-us/</link>
-        <image>https://cdn.wccftech.com/wp-content/uploads/2025/06/PRAGMATA_Keyart_1st_Horizontal_4K_RGB-1456x819.jpg</image>
+        <title>God of War</title>
+        <link>https://www.playstation.com/en-us/games/god-of-war/</link>
+        <image>https://wallpapers.com/images/hd/god-of-war-kratos-and-atreus-at-river-nahx1u4rudbu55hy.webp</image>
     </game>
 
     <game>
